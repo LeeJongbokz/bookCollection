@@ -1,0 +1,10 @@
+extends layouts/main.pug
+
+block content
+    .form-container
+        form(action=routes.join, method="post")
+            input(type="text", name="name", placeholder="Full Name")
+            input(type="email", name="email", placeholder="Email")
+            input(type="password", name="password", placeholder="Password")
+            input(type="password", name="password2", placholder="Verify Password")
+            input(type="submit", value="Join Now")
