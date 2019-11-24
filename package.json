@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node app.js"
+    "start": "nodemon --exec babel-node init.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,10 +15,13 @@
     "@babel/preset-env": "^7.7.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "mongoose": "^5.7.12",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "pug": "^2.0.4"
   }
 }

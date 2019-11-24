@@ -10,9 +10,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 const app = express();
-const PORT = 4000
 
-const handleListening = () => console.log('Listening on https://localhost:4000');
 const handleHome = (req, res) => res.send('Hello world');
 
 app.set("view engine", "pug");
@@ -27,6 +25,5 @@ app.use(routes.home, globalRouter);
 
 
 app.get('/', handleHome);
-app.listen(PORT, handleListening);
 
 export default app;
