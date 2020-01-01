@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+.btn{
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid silver;
+    color: crimson;
+    height: 37px;
+    line-height: 37px;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+input[type='text'], input[type='email'], input[type='password'], textarea{
+    border-radius: 4px;
+    height: 37px;
+    width: 30%;
+    margin: auto 100px;
+    padding: auto 30px;
+    border: 1px solid silver;
+}
+
+.input-group input{
+    width: 70%;
+}
+
+.container{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.input-group{
+    margin: auto 50px;
+}
+
+.input-group label{
+    width: 25%;
+    display: inline-block;
+}
+
+.input-group input{
+    width: 70%;
+}
+
+.half{
+    float: left;
+    width: 50%;
+    margin: 10px 0;
+}
+
+#join {
+    float: right;
+}
+
+.profile-wrap{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0;
+}
+
+.profile{
+    text-align: left;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+    background: lightcoral;
+}
+
+.user-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.count{
+    font-weight: bold;
+    color: crimson;
+    font-size: 18px;
+}
+
+.timeline{
+    margin-top: 10px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: top;
+}
+
+#search-form{
+    text-align: right;
+}
+
+#login-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    line-height: 200px;
+    height: 500px;
+    margin-left: -200px;
+    margin-top: -250px;
+    background-color: white;
+    text-align: center;
+  
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    outline: 9999px solid rgba(0,0,0,0.5);
+}
+
+#login-form::before{
+    border-radius: 5px;
+}
+
+#form_login{
+
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#form_login > p{
+      font-size: 20px;
+}
+
+
+
+#columns{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    column-width: 250px;
+    column-gap: 5px;
+}
+
+#columns figure img{
+    width: 100%;
+}
+
+#columns figure{
+    display: inline-block;
+    border: 1px solid #FFFAF0;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0,5);
+    opacity: 0.6;
+    border-radius: 20px;
+
+}
+
+.wrap{
+    background-color:#FFFAFA;
+    position: absolute;
+    width: 100%;
+    height: 2400px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+input[type=text]{
+
+    margin-left: 550px;
+    margin-top: 50px;
+    width: 800px;
+    height: 50px;
+    padding: 10px;
+
+}
+
+ul > h3{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FAF0E6;
+    margin-bottom: 0;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+li{
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+.page1{
+    width: 100%;
+    height: 1000px;
+    background-color:#FFFAFA;
+}
+
+#username{
+    margin-right: 550px;
+    margin-bottom: 5px;
+    width: 300px;
+    height: 40px;
+}
+
+#password{
+    margin-right: 100px;
+    width: 300px;
+}
+
+#age{
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+}
+
+#submitbutton{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+#submitbutton2{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#submitbutton3{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#join-form{
+    width: 450px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 150px;
+    margin-left: 700px;
+    opacity: 1;
+    background-color: white;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    
+}
+
+#form_join{
+    
+    border-radius: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#form_join > p{
+      font-size: 20px;
+}
