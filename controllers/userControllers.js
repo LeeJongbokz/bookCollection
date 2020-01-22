@@ -18,13 +18,15 @@ export const postJoin = async (req, res) => {
             age
         });
         await User.register(user, password);
-        }catch(error){
+        passport.authenticate('local')(req, res, function(){
+            res.redirect(routes.intro)
+        })
+
+    }catch(error){
             console.log(error);
-            res.redirect(routes.home);
-        }
+            res.redirect(routes.join);
+    }
 }
-
-
 
 export const getLogin = (req, res) => res.render("login");
 export const postLogin = (req, res) => passport.authenticate('local', {
@@ -33,6 +35,8 @@ export const postLogin = (req, res) => passport.authenticate('local', {
 }); 
 
 
+
+
 export const logout = (req, res) => res.render("Logout");
 export const page1 = (req, res) => res.render("Page1");
-
+export const intro = (req, res) => res.render("Intro");

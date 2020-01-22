@@ -1,0 +1,163 @@
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+
+ul > h3{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FAF0E6;
+    margin-bottom: 0;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+li{
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+
+
+#columns{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    column-width: 250px;
+    column-gap: 5px;
+}
+
+#columns figure img{
+    width: 100%;
+}
+
+#columns figure{
+    display: inline-block;
+    border: 1px solid #FFFAF0;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px RGBA(0,0,0,0,5);
+    opacity: 0.6;
+    border-radius: 20px;
+
+}
+
+
+.wrap{
+    background-color:#FFFAFA;
+    position: absolute;
+    width: 100%;
+    height: 2400px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+
+#join-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    line-height: 200px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -300px;
+    background-color: white;
+    text-align: center;
+  
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    outline: 9999px solid RGBA(0,0,0,0.5);
+}
+
+    
+#form_join{
+    
+    border-radius: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+#form_join > p{
+      position: relative;
+      font-size: 20px;
+      bottom: 30px;
+      height: 150px;
+}
+
+
+#username{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 40px;
+}
+
+#password{
+    width: 300px;
+    height: 40px;
+}
+
+
+#submitbutton{
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    line-height: initial;
+}
+
+#submitbutton2{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    line-height: initial;
+}
+
+#submitbutton3{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    line-height: initial;
+}
+
+#submitbutton4{
+    width: 150px;
+    height: 35px;
+    margin-top: 30px;
+    line-height: initial;
+}
+
+
+#age{
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+}
+

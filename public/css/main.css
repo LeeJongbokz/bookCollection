@@ -16,7 +16,7 @@ html, body{
     border-radius: 4px;
     background: white;
     border: 1px solid silver;
-    color: crimson;
+    color: rgb(165, 74, 92);
     height: 37px;
     line-height: 37px;
     vertical-align: top;
@@ -29,7 +29,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea{
     width: 30%;
     margin: auto 100px;
     padding: auto 30px;
-    border: 1px solid silver;
+    border: 1px solid grey;
 }
 
 .input-group input{
@@ -111,14 +111,14 @@ input[type='text'], input[type='email'], input[type='password'], textarea{
     width: 450px;
     line-height: 200px;
     height: 500px;
-    margin-left: -200px;
-    margin-top: -250px;
+    margin-left: -250px;
+    margin-top: -300px;
     background-color: white;
     text-align: center;
   
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
-    outline: 9999px solid rgba(0,0,0,0.5);
+    outline: 9999px solid RGBA(0,0,0,0.5);
 }
 
 #login-form::before{
@@ -137,9 +137,16 @@ input[type='text'], input[type='email'], input[type='password'], textarea{
 
 
 #form_login > p{
+      position: relative;
+      height: 150px;
       font-size: 20px;
+      bottom: 10px;
+      margin-bottom: 10px;
 }
 
+#form_login #username{
+    margin-top: 30px;
+}
 
 
 #columns{
@@ -160,7 +167,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea{
     margin: 0;
     margin-bottom: 15px;
     padding: 10px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0,5);
+    box-shadow: 2px 2px 5px RGBA(0,0,0,0,5);
     opacity: 0.6;
     border-radius: 20px;
 
@@ -176,9 +183,6 @@ input[type='text'], input[type='email'], input[type='password'], textarea{
 }
 
 input[type=text]{
-
-    margin-left: 550px;
-    margin-top: 50px;
     width: 800px;
     height: 50px;
     padding: 10px;
@@ -218,7 +222,6 @@ li{
 }
 
 #username{
-    margin-right: 550px;
     margin-bottom: 5px;
     width: 300px;
     height: 40px;
@@ -238,34 +241,50 @@ li{
 #submitbutton{
     width: 100px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
+    line-height: initial;
 }
 
 #submitbutton2{
     width: 150px;
     height: 30px;
     margin-top: 10px;
+    line-height: initial;
 }
 
 #submitbutton3{
     width: 150px;
     height: 30px;
     margin-top: 10px;
+    line-height: initial;
 }
+
+#submitbutton4{
+    width: 150px;
+    height: 35px;
+    margin-top: 30px;
+    line-height: initial;
+}
+
 
 #join-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
     width: 450px;
+    line-height: 200px;
     height: 500px;
-    border: 1px solid black;
-    margin-top: 150px;
-    margin-left: 700px;
-    opacity: 1;
+    margin-left: -250px;
+    margin-top: -300px;
     background-color: white;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    
+    text-align: center;
+  
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    outline: 9999px solid RGBA(0,0,0,0.5);
 }
 
+    
 #form_join{
     
     border-radius: 10px;
@@ -275,8 +294,78 @@ li{
     align-items: center;
     justify-content: center;
     background-color: white;
+
 }
 
 #form_join > p{
+      position: relative;
       font-size: 20px;
+      bottom: 30px;
+      height: 150px;
 }
+
+
+/* Style the form */
+#intro-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    line-height: 200px;
+    height: 500px;
+    margin-left: -320px;
+    margin-top: -300px;
+    background-color: white;
+    text-align: center;
+  
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    outline: 9999px solid RGBA(0,0,0,0.5);
+  }
+  
+ 
+/* intro */
+
+
+.content{
+    width: 960px;
+    margin: 20px auto;
+}
+
+.main{
+    float:left;
+    width: 650px;
+    margin-top: 80px;
+}
+
+
+#progressbar{
+    margin: 0;
+}
+
+#active1{
+    color: red;
+}
+
+fieldset{
+
+    display:none;
+    width: 350px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 85px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 25px 1px grey
+}
+
+
+#first{
+    display: block;
+    width: 350px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    margin-left: 85px;
+    box-shadow: 3px 3px 25px 1px grey;
+}
+
