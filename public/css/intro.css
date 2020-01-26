@@ -30,12 +30,14 @@ h3{
     margin-top: 40px;
 }
 
+.tab3h3{
+    margin-top: 15px;
+}
+
 li{
     margin-top: 12px;
     margin-left: 25px;
 }
-
-
 
 
 #columns{
@@ -90,11 +92,13 @@ li{
     margin-top: -300px;
     background-color: white;
     text-align: center;
-  
+
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
     outline: 9999px solid RGBA(0,0,0,0.5);
 }
+
+  
   
 h1 {
     text-align: center;  
@@ -135,17 +139,27 @@ button:hover {
   
 .prevBtn {
     background-color: #bbbbbb;
-    text-align:top;
+    text-align: center;
+    line-height: 50%;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 1em;
 }
   
 
 .nextBtn {
     margin-left: 20px;
-   
+    text-align: center;
+    line-height: 50%;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 50px;
 }
 
 #btns1{
-    padding-top: 50px;
+    position: relative;
+    bottom: 8%;
     width: 500px;
     height: 100px;
 }
@@ -190,9 +204,16 @@ button:hover {
     height: 500px;
 }
 
-input[type=radio], label{
-    margin-top: 3px;
-    width: 20px;
+input[type=radio]{
+    margin-top: 2px;
+    width: 25px;
+    vertical-align: middle;
+    line-height: 2em;
+}
+
+label{
+    margin-top: 6px;
+    width: 30px;
     vertical-align: middle;
     line-height: 1em;
 }
@@ -219,10 +240,77 @@ input[type=radio], label{
     height: 50px;
 }
 
-label{
+.tab1label{
     margin-top: 5px;
     margin-bottom: 1px;
-    width: 100px;
+    width: 120px;
     height: 20px;
     vertical-align: middle;
+}
+
+.tab2label{
+    margin-top: 5px;
+    margin-bottom: 1px;
+    width: 170px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.tab3h6{
+    font-color: black;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;  
+    margin-top: 20px;
+    vertical-align: center;
+}
+
+#regForm figure{
+    display: inline-block;
+    width: 100px;
+    height: 140px;
+    margin-left: 15px;
+    margin-bottom: -10px;
+    bottom: 100px;
+}
+
+
+#regForm figure img{
+    width: 100%;
+    height: 100%;
+}
+
+#regForm figure:hover .bookGenre{
+    opacity: 0.5;
+} 
+
+#regForm figure .bookGenre{
+    position: absolute;
+    width: 100px;
+    z-index: 999;
+    margin-right: 15px;
+    left: 2%;
+    right: 10%;
+    bottom: 50%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+#regForm #tab3columns{
+
+    position: relative;
+    column-gap: 5px;
+}
+
+#regForm figure #tab3columns .tab3level1{
+
+    display: inline-block;
+    width: 100px;
+    height: 140px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    bottom: 10%;
 }

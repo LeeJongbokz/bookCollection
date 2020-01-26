@@ -1,6 +1,7 @@
 import express from "express";
+import passport from "passport";
 import routes from "../routes";
-import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, page1} from '../controllers/userControllers';
+import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, page1, facebookLogin, postFacebookLogin } from '../controllers/userControllers';
 
 const globalRouter = express.Router();
 
@@ -14,6 +15,17 @@ globalRouter.get(routes.logout, logout);
 
 globalRouter.get(routes.intro, intro);
 globalRouter.get(routes.page1, page1);
+
+globalRouter.get(routes.facebook, facebookLogin);
+
+globalRouter.get(
+    routes.facebookCallback,
+    passport.authenticate("facebook", { successRedirect: "/home"}),
+    function(req, res){
+        res.redirect('/');
+    },
+    postFacebookLogin
+);
 
 
 export default globalRouter;

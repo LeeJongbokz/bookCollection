@@ -8,6 +8,13 @@ const LOGOUT = '/logout';
 const PAGE1 = '/page1';
 const INTRO = '/intro';
 
+
+// Facebook
+
+const FB = '/auth/facebook';
+const FB_CALLBACK = '/auth/facebook/callback';
+
+
 const routes = {
 
     home : HOME,
@@ -16,6 +23,9 @@ const routes = {
     logout: LOGOUT,
     page1: PAGE1,
     intro: INTRO,
+
+    facebook: FB,
+    facebookCallback : FB_CALLBACK
 }
 
 
