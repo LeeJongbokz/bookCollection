@@ -20,12 +20,8 @@ globalRouter.get(routes.facebook, facebookLogin);
 
 globalRouter.get(
     routes.facebookCallback,
-    passport.authenticate("facebook", { successRedirect: "/home"}),
-    function(req, res){
-        res.redirect('/');
-    },
+    passport.authenticate('facebook', { failureRedirect: '/login' }),
     postFacebookLogin
-);
-
+)
 
 export default globalRouter;

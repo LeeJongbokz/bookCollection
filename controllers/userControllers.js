@@ -34,34 +34,16 @@ export const postLogin = (req, res) => passport.authenticate('local', {
     succcesRedirect: routes.page1
 }); 
 
-
 export const facebookLogin = passport.authenticate("facebook");
 
-export const facebookLoginCallback = async (_, __, profile, cb) => {
-    const {
-      _json: { id, name, email }
-    } = profile;
-    try {
-      const user = await User.findOne({ email });
-      if (user) {
-        user.facebookId = id;
-        user.save();
-        return cb(null, user);
-      }
-      const newUser = await User.create({
-        email,
-        name,
-        facebookId: id,
-      });
-      return cb(null, newUser);
-    } catch (error) {
-      return cb(error);
-    }
-  };
+export const facebookLoginCallback = (accessToken, refreshToken, profile, cb) =>{
+    console.log(accessToken, refreshToken, profile, cb);
+};
 
 export const postFacebookLogin = (req, res) => {
-    res.redirect(home);
+    res.redirect(routes.home);
 }
+
 
 
 export const logout = (req, res) => res.render("Logout");
