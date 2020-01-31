@@ -11,8 +11,8 @@ const INTRO = '/intro';
 
 // Facebook
 
-const FB = '/auth/facebook';
-const FB_CALLBACK = '/auth/facebook/callback';
+const FB = "/auth/facebook";
+const FB_CALLBACK = "/auth/facebook/callback";
 
 
 const routes = {
@@ -25,8 +25,8 @@ const routes = {
     intro: INTRO,
 
     facebook: FB,
-    facebookCallback : FB_CALLBACK
-}
+    facebookCallback : FB_CALLBACK,
+};
 
 
 export default routes;

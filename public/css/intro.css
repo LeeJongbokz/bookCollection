@@ -30,7 +30,7 @@ h3{
     margin-top: 40px;
 }
 
-.tab3h3{
+.tab1h3{
     margin-top: 15px;
 }
 
@@ -85,7 +85,7 @@ li{
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 500px;
+    width: 700px;
     line-height: 200px;
     height: 500px;
     margin-left: -250px;
@@ -96,6 +96,7 @@ li{
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
     outline: 9999px solid RGBA(0,0,0,0.5);
+    overflow-y: scroll
 }
 
   
@@ -123,6 +124,7 @@ input.invalid {
     display: none;
 }
   
+/*
 button {
     width: 150px;
     height: 50px;
@@ -132,6 +134,7 @@ button {
     font-family: Raleway;
     cursor: pointer;
 }
+*/
   
 button:hover {
     opacity: 0.8;
@@ -314,3 +317,95 @@ label{
     margin-bottom: 0;
     bottom: 10%;
 }
+
+.search{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 80px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.bookSearch{
+    width: 600px;
+    height: 40px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+#search{
+    margin-top: -15px;
+    margin-left: 15px;
+    width: 60px;
+    height: 30px;
+    line-height: 1em;
+}
+
+#list{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bookList{
+    width: 150px;
+    height: 600px;
+    margin-left: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bookList img{
+    width: 100px;
+    height: 150px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.bookNameList{
+
+    margin-top: -50px;
+    margin-left: -20px;
+    width: 250px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.bookNameList strong{
+
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+
+.bookStarList{
+
+    margin-top: -45px;
+    width: 300px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.my-rating{
+
+    height: 150px;
+    margin-bottom: 20px;
+}
+

@@ -34,7 +34,7 @@ export const postLogin = (req, res) => passport.authenticate('local', {
     succcesRedirect: routes.page1
 }); 
 
-export const facebookLogin = passport.authenticate("facebook");
+export const facebookLogin = passport.authenticate("facebook", {failWithError: true});
 
 export const facebookLoginCallback = (accessToken, refreshToken, profile, cb) =>{
     console.log(accessToken, refreshToken, profile, cb);
@@ -43,7 +43,6 @@ export const facebookLoginCallback = (accessToken, refreshToken, profile, cb) =>
 export const postFacebookLogin = (req, res) => {
     res.redirect(routes.home);
 }
-
 
 
 export const logout = (req, res) => res.render("Logout");

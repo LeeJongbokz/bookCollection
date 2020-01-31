@@ -4,11 +4,10 @@ block content
     head
         
         link(rel='stylesheet', href='/css/intro.css', type='text/css')
+        <link rel="stylesheet" type="text/css" href="/css/star-rating-svg.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="/js/intro.js"></script>
-        
-
-
+        <script src="/js/jquery.star-rating-svg.js"></script>
     body
         <div id="wrap">
             #columns
@@ -127,94 +126,18 @@ block content
                 
             <form id="regForm" action="">
                     <div id="tab1">
-                        <h3>성별이 어떻게 되세요?</h3>
-                        <div id="radios1">
-                            <div id="rd1">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab1label">여자</label>
-                            </div>
-                            <div id="rd2">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab1label">남자</label>
-                            </div>
-                            <div id="rd3">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab1label">사용자 지정</label>
-                            </div>
-                        </div>
-                        <div id="btns1">
-                            <button class="prevBtn" value="Before"><p class="btnText"> 이전</p></button>
-                            <button class="nextBtn"><p class="btnText">다음</p></button>
+                        <h3>안녕하세요!</h3>
+                        <h3 class="tab1h3">10개의 책에 별점을 매겨보세요</h3>
+                        <div class="search">
+                            <input class ="bookSearch" type="text" placeholder="책 이름을 입력해주세요.">
+                            <button id="search">찾기</button>
+                        </div>   
+                        <div id="list">
+                            <p class="bookList"></p>
+                            <p class="bookNameList"></p>
+                            <p class="bookStarList"></p>
                         </div>
                     </div>
-
-                    <div id="tab2">
-                        <h3>책을 좋아하세요?</h3>
-                        <div id="radios1">
-                            <div id="rd1">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab2label">정말 좋아해요!</label>
-                            </div>
-                            <div id="rd2">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab2label">많이 좋아해요!</label>
-                            </div>
-                            <div id="rd3">
-                                <input type="radio" type="radio" name="gender">
-                                <label class="tab2label">앞으로 좋아해보려구요!</label>
-                            </div>
-                        </div><br>
-                        <div id="btns1">
-                            <button type="button" class="prevBtn" onclick="nextPrev('-1')">이전</button>
-                            <button type="button" class="nextBtn" onclick="nextPrev('1')">다음</button>
-                        </div>
-                    </div>
-
-                    <div id="tab3">
-                        <h3>마지막입니다!</h3>
-                        <h3 class="tab3h3">3가지 좋아하는 장르를 골라주세요</h3>
-                        <div id="tab3columns">
-                            <figure>
-                                <img src="https://images-na.ssl-images-amazon.com/images/I/51HSkTKlauL._SX346_BO1,204,203,200_.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/767/24/coversum/8937483114_1.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/9817/79/coversum/8937433702_1.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/17048/25/coversum/8932473900_1.jpg">
-                                <div class="bookGenre">
-                                    <h5>과학</h5>
-                                </div>
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/4/46/cover150/8935610240_1.jpg">
-                                <div class="bookGenre">
-                                    <h5>역사</h5>
-                                </div>
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/7/57/coversum/8970840656_2.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/599/13/coversum/8932909156_1.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/1284/8/cover150/8956605416_2.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/52/89/coversum/8956370958_2.jpg">
-                            </figure>
-                            <figure>
-                                <img src="https://image.aladin.co.kr/product/4898/84/coversum/8937834790_2.jpg">
-                            </figure>
-                        </div>
-                        <button type="button" class="prevBtn" onclick="nextPrev(-1)">이전</button>
-                        <button type="button" class="nextBtn" onclick="nextPrev(1)">다음</button>
-                    </div>
-
 
                     <!-- Circles which indicates the steps of the form: -->
                     <div style="text-align:center;margin-top:40px;">
