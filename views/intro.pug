@@ -8,6 +8,7 @@ block content
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="/js/intro.js"></script>
         <script src="/js/jquery.star-rating-svg.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     body
         <div id="wrap">
             #columns
@@ -126,7 +127,10 @@ block content
                 
             <form id="regForm" action="">
                     <div id="tab1">
-                        <h3>안녕하세요!</h3>
+                        <div class="tab1header">
+                            <h3>안녕하세요!</h3>
+                            <i class='nextBtn fas fa-arrow-right'></i>
+                        </div>
                         <h3 class="tab1h3">10개의 책에 별점을 매겨보세요</h3>
                         <div class="search">
                             <input class ="bookSearch" type="text" placeholder="책 이름을 입력해주세요.">
@@ -138,14 +142,34 @@ block content
                             <p class="bookStarList"></p>
                         </div>
                     </div>
-
-                    <!-- Circles which indicates the steps of the form: -->
-                    <div style="text-align:center;margin-top:40px;">
-                        <span class="step"></span>
-                        <span class="step"></span>
-                        <span class="step"></span>
-                        <span class="step"></span>
+                    <div id="tab2">
+                        <div class="tab2header">
+                            <i class='prevBtn fas fa-arrow-left'></i>
+                            <h3 class="tab2h3">당신의 서재를 선택하세요</h3>
+                        </div>
+                        <div id="bookshelves">     
+                            <figure>
+                                <img class="bookshelf1" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/373736f80f15ad4a4caca58003dada64.jpg">
+                                <img class="check1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
+                            </figure> 
+                             <figure>
+                                <img class="bookshelf2" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/3af9acda1cf5c6d96c97e38eb8e9599d.jpg">
+                                <img class="check2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
+                            </figure> 
+                             <figure>
+                                <img class="bookshelf3" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/535ed0fa6f7ff3ff06b0267ddd45b720.jpg">
+                                <img class="check3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
+                            </figure> 
+                             <figure>
+                                <img class="bookshelf4" src="https://t1.daumcdn.net/cfile/tistory/21251F48528C6E9934">
+                                <img class="check4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
+                            </figure> 
+                        </div>
+                         <form action='/intro', method="post", id="form_intro">
+                            <input class="done" type="submit" value="완료" onClick="location.href='/mypage'">
+                         </form>
                     </div>
+
 
             </form>
 

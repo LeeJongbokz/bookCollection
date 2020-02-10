@@ -14,28 +14,13 @@ $(function() {
             $('#regForm').css('left', 600);
             $('#regForm').css('width', 800);
             $('#regForm').css('height', 600);
-            $('.prevBtn').css('line-height', 35);
-            $('.nextBtn').css('line-height', 35);
         }else if(n == 2){
             $('#tab1').hide();
             $('#tab2').show();
-            $('#regForm').css('left', 750);
-            $('#regForm').css('width', 500);
-            $('#regForm').css('height', 500);
+            $('#regForm').css('left', 600);
+            $('#regForm').css('width', 800);
+            $('#regForm').css('height', 600);
         }
-
-        if (n == 1) {
-            $('.prevBtn').hide();
-        }else {
-            $('.prevBtn').show();
-        }
-            
-        if (n == 3) {
-            $('.nextBtn').html("제출");
-        } else {
-            $('.nextBtn').html("다음");
-        }
-
     }
 
 
@@ -65,6 +50,45 @@ $(function() {
         }
             
         showTab(currentTab);     
+    });
+
+
+    $(".check1").hide();
+    $(".check2").hide();
+    $(".check3").hide();
+    $(".check4").hide();
+    $('.done').hide();
+
+    $('.bookshelf1').click(function() {
+        $(".check1").show();
+        $(".check2").hide();
+        $(".check3").hide();
+        $(".check4").hide();
+        $('.done').show();
+    });
+
+    $('.bookshelf2').click(function() {
+        $(".check1").hide();
+        $(".check2").show();
+        $(".check3").hide();
+        $(".check4").hide();
+        $('.done').show();
+    });
+
+    $('.bookshelf3').click(function() {
+        $(".check1").hide();
+        $(".check2").hide();
+        $(".check3").show();
+        $(".check4").hide();
+        $('.done').show();
+    });
+
+    $('.bookshelf4').click(function() {
+        $(".check1").hide();
+        $(".check2").hide();
+        $(".check3").hide();
+        $(".check4").show();
+        $('.done').show();
     });
 
 })

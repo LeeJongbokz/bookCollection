@@ -7,7 +7,7 @@ const LOGIN = '/login';
 const LOGOUT = '/logout';
 const PAGE1 = '/page1';
 const INTRO = '/intro';
-
+const MYPAGE = '/mypage';
 
 // Facebook
 
@@ -23,6 +23,7 @@ const routes = {
     logout: LOGOUT,
     page1: PAGE1,
     intro: INTRO,
+    mypage: MYPAGE,
 
     facebook: FB,
     facebookCallback : FB_CALLBACK,

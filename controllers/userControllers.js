@@ -48,3 +48,4 @@ export const postFacebookLogin = (req, res) => {
 export const logout = (req, res) => res.render("Logout");
 export const page1 = (req, res) => res.render("Page1");
 export const intro = (req, res) => res.render("Intro");
+export const myPage = (req, res) => res.render("Mypage");
