@@ -1,0 +1,26 @@
+extends layouts/main.pug
+block content
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="/css/bookpage.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bookpage.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+    </head>
+    body
+        <div id="book">
+            <div id="bookCover"></div>
+                <div id="bookInfo">
+                    <div id="bookTitle"></div>
+                    <div id="bookWriter">by </div>
+                    <div id="bookDescription"></div>
+                </div>
+        </div>
+        <div id="bookReviewInfo">
+            <div id="bookReviewName">리뷰</div> 
+            <button id="bookReview" onClick="open()", type="button">리뷰 작성하기</button>    
+        </div>
+        <div id="bookReviewBox">
+                <p>레이달리오는 말한다.단계적인 사고를 통하여 합리적인 결정을 내리는 것이 중요하다는 것을.예를 들어 어떤 것이 중요한가 아닌가를 주관적인 생각에 따라 판단하고 결정할 것이 아니라 목적을 이루기 위해 그 어떤 것이 필요한지 아닌지를 기준으로 판단하면서 문제를 해결하라고 한다. 책을 읽기 전, 읽고 난 후의 나를 비교하라 하면 분명하게 말할 수 있다.훨씬 더 발전적이게 변했음을.</p>
+        </div>
+

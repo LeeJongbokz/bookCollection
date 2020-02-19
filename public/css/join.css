@@ -40,6 +40,9 @@ li{
 
 
 #columns{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
     position: relative;
     margin-top: 50px;
     margin-left: 50px;
@@ -53,7 +56,7 @@ li{
 
 #columns figure{
     display: inline-block;
-    border: 1px solid #FFFAF0;
+    border: 1px solid grey;
     margin: 0;
     margin-bottom: 15px;
     padding: 10px;
@@ -88,7 +91,7 @@ li{
   
     /* needed styles for the overlay */
     z-index: 10; /* keep on top of other elements on the page */
-    outline: 9999px solid RGBA(0,0,0,0.5);
+    border-radius: 10px;
 }
 
     
@@ -105,57 +108,51 @@ li{
 }
 
 #form_join > p{
-      position: relative;
-      font-size: 20px;
-      bottom: 30px;
-      height: 150px;
+
+    position: relative;
+    font-size: 20px;
+    bottom: 30px;
+    height: 150px;
+    font-family: 'Nanum Gothic', sans-serif;  ;
 }
 
 
 #username{
     margin-bottom: 5px;
-    width: 300px;
+    width: 250px;
     height: 40px;
+    border: none;
+    border:solid 1px;
+    border-color: grey;
+    border-radius: 10px;
 }
 
 #password{
-    width: 300px;
+    width: 250px;
     height: 40px;
+    border: none;
+    border:solid 1px;
+    border-color: grey;
+    border-radius: 10px;
 }
 
 
 #submitbutton{
-    width: 100px;
-    height: 30px;
-    margin-top: 30px;
-    line-height: initial;
-}
-
-#submitbutton2{
-    width: 150px;
-    height: 30px;
-    margin-top: 10px;
-    line-height: initial;
-}
-
-#submitbutton3{
-    width: 150px;
-    height: 30px;
-    margin-top: 10px;
-    line-height: initial;
-}
-
-#submitbutton4{
-    width: 150px;
+    width: 250px;
     height: 35px;
-    margin-top: 30px;
+    margin-top: 50px;
     line-height: initial;
+    background-color: #b9936c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
 }
 
-
-#age{
-    margin-top: 5px;
-    height: 40px;
-    width: 300px;
+#submitbutton:hover{
+    cursor: pointer;
 }
 
+.joinWelcome{
+    font-weight:bold;
+}

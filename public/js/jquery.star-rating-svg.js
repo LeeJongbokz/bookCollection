@@ -142,6 +142,7 @@
         // force minimum rating
         index = ( minRating && minRating <= this.settings.totalStars && index < minRating ) ? minRating - 1 : index;
         return index;
+        console.log(index);
       },
   
       getOffsetByPixel: function(e, $target, width){

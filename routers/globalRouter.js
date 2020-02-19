@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
 import routes from "../routes";
-import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, myPage, page1, facebookLogin, postFacebookLogin } from '../controllers/userControllers';
+import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, myPage, bookPage, page1, facebookLogin, postFacebookLogin } from '../controllers/userControllers';
 
 const globalRouter = express.Router();
 
@@ -16,6 +16,7 @@ globalRouter.get(routes.logout, logout);
 globalRouter.get(routes.intro, intro);
 
 globalRouter.get(routes.mypage, myPage);
+globalRouter.get(routes.bookpage, bookPage);
 globalRouter.get(routes.page1, page1);
 
 globalRouter.get(routes.facebook, facebookLogin);

@@ -1,26 +1,28 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
+import localStorage from "localStorage";
 import { runInNewContext } from "vm";
 
 
-export const home = (req, res) => res.render("Home");
-export const getJoin = (req, res) => res.render("Join");
+export const home = (req, res) => res.render("home");
+export const getJoin = (req, res) => res.render("join");
 export const postJoin = async (req, res) => {
     const {
-        body: { email, password, age}
+        body: {email, password}
     } = req;
 
     try{        
         const user = new User({
-            email,
-            password,
-            age
-        });
-        await User.register(user, password);
-        passport.authenticate('local')(req, res, function(){
-            res.redirect(routes.intro)
+            email
         })
+        await User.register(user, password);
+        user.bookShelfUrl = "hello";
+     
+        localStorage.setItem('tempbookShelfUrl', user.bookShelfUrl);
+    
+        res.redirect(routes.intro);
+   
 
     }catch(error){
             console.log(error);
@@ -45,7 +47,10 @@ export const postFacebookLogin = (req, res) => {
 }
 
 
-export const logout = (req, res) => res.render("Logout");
-export const page1 = (req, res) => res.render("Page1");
-export const intro = (req, res) => res.render("Intro");
-export const myPage = (req, res) => res.render("Mypage");
+export const logout = (req, res) => res.render("logout");
+export const page1 = (req, res) => res.render("page1");
+export const intro = (req, res) => res.render("intro");
+export const myPage = (req, res) => res.render("mypage");
+
+export const bookPage = (req, res) => res.render("bookpage");
+

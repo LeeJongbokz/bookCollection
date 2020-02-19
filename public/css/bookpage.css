@@ -1,0 +1,145 @@
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+
+ul > h3{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FAF0E6;
+    margin-bottom: 0;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+li{
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+#book{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 800px;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#bookCover{
+    width: 140px;
+    height: 210px;
+    border-width: 1px;
+    border-color: grey;
+    border-style:solid;
+}
+
+#bookCover img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#bookInfo{
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-width: 1px;
+    border-color:black;
+    border-style: none;
+}
+
+#bookTitle{
+    margin-left: -30px;
+    font-size: 20px;
+    width: 600px;
+    height: 50px;
+    border-color:black;
+    border-width: 1px;
+    border-style: none;
+}
+
+#bookWriter{
+    margin-left: -250px;
+    width: 200px;
+    height: 50px;
+    border-color:black;
+    border-width: 1px;
+    border-style: none;
+}
+
+#bookDescription{
+    font-size: 13px;
+    width: 500px;
+    height:300px;
+    border-color:black;
+    border-width: 1px;
+    border-style: none;
+}
+
+#bookReviewInfo{
+
+    width: 700px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#bookReviewName{
+    width: 100px;
+    height: 50px;
+    margin-left: 415px;
+    font-size: 20px;
+}
+
+#bookReview{
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+    border-color: white;
+    border-style: none;
+    background-color: #DEB887;
+    font-weight: bold;
+}
+
+#bookReview:hover{
+    cursor:pointer;
+}
+
+
+#bookReviewBox{
+    width: 650px;
+    height: 250px;
+    border-color: lightgrey;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 400px;
+}

@@ -1,7 +1,7 @@
 
 
 $(function() {
-
+    
     var currentTab = 1; 
 
     showTab(currentTab) 
@@ -59,36 +59,51 @@ $(function() {
     $(".check4").hide();
     $('.done').hide();
 
-    $('.bookshelf1').click(function() {
+    var intro_bookShelfUrl = localStorage.getItem('tempbookShelfUrl');
+    console.log(intro_bookShelfUrl);
+
+    $('.bookShelf1').click(function() {
         $(".check1").show();
         $(".check2").hide();
         $(".check3").hide();
         $(".check4").hide();
         $('.done').show();
+        intro_bookShelfUrl = "https://media-assets.bookbub.com/wp-content/uploads/2016/12/373736f80f15ad4a4caca58003dada64.jpg";
+        localStorage.setItem('intro_bookShelfUrl', intro_bookShelfUrl);
+        console.log(intro_bookShelfUrl);
     });
 
-    $('.bookshelf2').click(function() {
+    $('.bookShelf2').click(function() {
         $(".check1").hide();
         $(".check2").show();
         $(".check3").hide();
         $(".check4").hide();
         $('.done').show();
+        intro_bookShelfUrl = "https://media-assets.bookbub.com/wp-content/uploads/2016/12/3af9acda1cf5c6d96c97e38eb8e9599d.jpg";
+        localStorage.setItem('intro_bookShelfUrl', intro_bookShelfUrl);
+        console.log(intro_bookShelfUrl);
     });
 
-    $('.bookshelf3').click(function() {
+    $('.bookShelf3').click(function() {
         $(".check1").hide();
         $(".check2").hide();
         $(".check3").show();
         $(".check4").hide();
         $('.done').show();
+        intro_bookShelfUrl = "https://media-assets.bookbub.com/wp-content/uploads/2016/12/535ed0fa6f7ff3ff06b0267ddd45b720.jpg";
+        localStorage.setItem('intro_bookShelfUrl', intro_tempbookShelfUrl);
+        console.log(intro_bookShelfUrl);
     });
 
-    $('.bookshelf4').click(function() {
+    $('.bookShelf4').click(function() {
         $(".check1").hide();
         $(".check2").hide();
         $(".check3").hide();
         $(".check4").show();
         $('.done').show();
+        intro_tempbookShelf = "https://t1.daumcdn.net/cfile/tistory/21251F48528C6E9934";
+        localStorage.setItem('intro_bookShelfUrl', intro_tempbookShelfUrl);
+        console.log(intro_bookShelfUrl);
     });
 
 })
@@ -108,8 +123,6 @@ $(document).ready(function(){
             headers: {Authorization: "KakaoAK 78d32ce1cac5c4d2a998590338bef88d"}
         })
             .done(function( msg ) {
-                console.log(msg.documents[0].title);
-                console.log(msg.documents[0].thumbnail);
                 $('.bookList').append("<img src='"+ msg.documents[0].thumbnail + "'/>");
                 $('.bookNameList').append("<strong>" + msg.documents[0].title + "</strong>");
             });
@@ -124,8 +137,13 @@ $(document).ready(function(){
         });
     });
 
- 
+    $(".done").click(function(e){
+
+        e.preventDefault();
     
+         
+
+    });
 
 });
 

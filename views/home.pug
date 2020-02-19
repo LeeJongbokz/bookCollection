@@ -2,7 +2,9 @@ extends layouts/main.pug
 
 block content
     head
-        link(rel='stylesheet', href='/css/home.css', type='text/css')
+        <link href="/css/home.css", rel="stylesheet",  type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     body
       <div id="wrap">
         #columns
@@ -117,14 +119,16 @@ block content
           <figure>
             <img src="https://image.aladin.co.kr/product/1621/17/cover500/8937462842_2.jpg">
           </figure> 
-
+        
         <div id="login-form">
             <form id="form_login">
-                    <p> BookCollection에 오신 것을 환영합니다! </p>
+                    <p class="welcome"> BookCollection에 오신 것을 환영합니다! </p>
                     <input type="text" id="username" placeholder=" 이메일" />
                     <input type="password" id="password" placeholder=" 비밀번호"/>
-                    <button id="submitbutton" onClick="location.href='/page1'" type="button">로그인</button>
-                    <button id="submitbutton2" onClick="location.href='/auth/facebook'" type="button">페이스북 로그인</button>
+                    <button id="submitbutton" onClick="location.href='/mypage'" type="button">로그인</button>
+                    <div id="facebook">
+                      <button id="submitbutton2" onClick="location.href='/auth/facebook'"><i class="fa fa-facebook-official"></i>페이스북 로그인</button>
+                    </div>
                     <button id="submitbutton3" onClick="location.href='/join'" type="button">회원가입</button>
             </form>
         </div>
