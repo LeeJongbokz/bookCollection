@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
 
-    $.cookie("name", $(".bookSearch").val());
-    
+    $.cookie('bookname', $(".bookSearch").val());
+
     $("#search").click(
         function() {
             console.log("clicked...waiting...");

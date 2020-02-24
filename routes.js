@@ -7,6 +7,7 @@ const LOGIN = '/login';
 const LOGOUT = '/logout';
 const PAGE1 = '/page1';
 const INTRO = '/intro';
+const MYLIBRARY = '/mylibrary';
 const MYPAGE = '/mypage';
 const BOOKPAGE = '/bookpage';
 
@@ -24,6 +25,7 @@ const routes = {
     logout: LOGOUT,
     page1: PAGE1,
     intro: INTRO,
+    mylibrary: MYLIBRARY,
     mypage: MYPAGE,
     bookpage: BOOKPAGE,
 

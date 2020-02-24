@@ -22,7 +22,7 @@ export const postJoin = async (req, res) => {
         localStorage.setItem('tempbookShelfUrl', user.bookShelfUrl);
     
         res.redirect(routes.intro);
-   
+        next();
 
     }catch(error){
             console.log(error);
@@ -33,7 +33,7 @@ export const postJoin = async (req, res) => {
 export const getLogin = (req, res) => res.render("login");
 export const postLogin = (req, res) => passport.authenticate('local', {
     failureRedirect: routes.login,
-    succcesRedirect: routes.page1
+    succcesRedirect: routes.mylibrary
 }); 
 
 export const facebookLogin = passport.authenticate("facebook", {failWithError: true});
@@ -51,6 +51,7 @@ export const logout = (req, res) => res.render("logout");
 export const page1 = (req, res) => res.render("page1");
 export const intro = (req, res) => res.render("intro");
 export const myPage = (req, res) => res.render("mypage");
+export const myLibrary = (req, res) => res.render("mylibrary");
 
 export const bookPage = (req, res) => res.render("bookpage");
 

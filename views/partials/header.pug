@@ -1,9 +1,11 @@
 <ul>
     <h3> BookCollection </h3>
     
-    if loggedUser
-        <li><a href="/">Home</a></li>
-        <li><a href="news.asp">My Books</a></li>
-        <li><a href="about.asp">About</a></li>
-    
+    if !user
+        <li><a href="/join">회원가입</a></li>
+        <li><a href="/">로그인</a></li>
+    else
+        <li><a href="/mypage">내 페이지</a></li>
+        <li><a href="/mylibrary">내 서재</a><li>
+
 </ul>
