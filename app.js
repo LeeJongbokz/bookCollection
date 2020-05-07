@@ -30,8 +30,7 @@ app.use(helmet());
 // Express가 템플릿을 렌더링하려면 다음과 같이 앱을 설정 해야함
 app.set("view engine", "pug");
 
-// express.static은 
-// 이미지, CSS, Javascript 파일과 같은 정적 파일을 사용하기 위해서 선언됨
+// express.static은 이미지, CSS, Javascript 파일과 같은 정적 파일을 사용하기 위해서 선언됨
 // express.static은 미들웨어 함수임
 // 아래 코드는 'public'이라는 이름의 폴더에서 정적 파일들을 가져오라는 내용임
 app.use(express.static(path.join(__dirname, "public")));
