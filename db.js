@@ -4,13 +4,13 @@ dotenv.config();
 
 mongoose.Promise = global.Promise;
 
-// mongoose.connect()는 MongoDB에 연결하기 위해 사용하는 메소드임
+// mongoose.connect()는 mongoose와 MongoDB를 연결하기 위해 사용하는 메소드임
 // 여기서 process.env.MONGO_URL은 MongoDB의 주소를 나타내며,
 // 보안상 목적으로 env파일에 저장해둠
 // mongoose.connect()에는 옵션을 추가할 수 있음
 
 // useNewUrlParser는 MongoDB의 connection string parser가 deprecated되면서,
-// 새로운 parser를 사용하는데, 만약 새로운 parser에서 bug가 발생되었을 시
+// 새로운 parser를 사용하는데, 만약 새로운 parser에서 bug가 발생되었을 시,
 // 이전 parser를 사용하기 위해서 지정하는 옵션임
 
 // useFindAndModify는 Default로 True로 선언됨
@@ -31,10 +31,11 @@ mongoose.connect(
     }
 )
 
-
-
+// const db = mongoose.connection은
+// 실제 connection 인스턴스를 만듦
 const db = mongoose.connection;
 
+// handleOpen과 handleError는  
 const handleOpen = () => console.log("Connected to DB");
 const handleError = error => console.log("Error on DB Connection:${error}");
 
