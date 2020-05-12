@@ -32,36 +32,31 @@ globalRouter.get(routes.join, getJoin);
 // 함수 실행이 끝나면, 다음 콜백함수인 postLogin 함수가 실행됨
 globalRouter.post(routes.join, postJoin, postLogin);
 
-// globalRouter.get(routes.login, getLogin)은
-// routes.login으로 들어오는 get요청에 대해서
-// 콜백함수인 getLogin을 실행시킴
+// 이하 동일
 globalRouter.get(routes.login, getLogin);
 
-// globalRouter.post(routes.login, postLogin)은
-// routes.login으로 들어오는 post요청에 대해서
-// 콜백함수인 postLogin을 실행시킴
+// 이하 동일
 globalRouter.post(routes.login, postLogin);
 
-// globalRouter.get(routes.logout, logout)은
-// routes.logout으로 들어오는 get요청에 대해서
-// 콜백함수인 logout을 실행시킴
+// 이하 동일
 globalRouter.get(routes.logout, logout);
 
-// globalRouter.get(routes.intro, intro)은
-// routes.intro으로 들어오는 get요청에 대해서
-// 콜백함수인 intro를 실행시킴
+// 이하 동일
 globalRouter.get(routes.intro, intro);
 
-// globalRouter.get(routes.mylibrary, myLibrary)은
-// routes.mylibrary로 들어오는 get요청에 대해서
-// 콜백함수인 myLibrary를 실행시킴 
+// 이하 동일
 globalRouter.get(routes.mylibrary, myLibrary);
 
-
+// 이하 동일
 globalRouter.get(routes.mypage, myPage);
+
+// 이하 동일
 globalRouter.get(routes.bookpage, bookPage);
+
+// 이하 동일
 globalRouter.get(routes.page1, page1);
 
+// 이하 동일
 globalRouter.get(routes.facebook, facebookLogin);
 
 globalRouter.get(
