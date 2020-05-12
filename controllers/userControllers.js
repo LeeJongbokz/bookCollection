@@ -4,6 +4,8 @@
 
 import passport from "passport";
 import routes from "../routes";
+// User 모델을 User.js에서 import함
+// User 모델을 import하는 이유는 postJoin함수에서 User 객체를 생성할 때, 활용하기 위함임 
 import User from "../models/User";
 import localStorage from "localStorage";
 import { runInNewContext } from "vm";
