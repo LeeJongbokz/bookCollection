@@ -38,8 +38,11 @@ export const postJoin = async (req, res) => {
     } = req;
 
     // try-catch문을 사용함
-    // try-catch문을 사용하는 이유는 
+    // try-catch문을 사용하는 이유는 try문이 에러를 throw했을 시, 
+    // try문 내에서의 실행을 중단하고, catch문으로 이동해, 그 에러를 출력하기 위함임 
+    // catch절 안에는 try문이 에러를 throw 했을 시, 무엇을 할 지를 명시할 수 있음
     try{        
+        // 새로운 유저 객체를 만들어줌
         const user = new User({
             email
         })
@@ -48,11 +51,18 @@ export const postJoin = async (req, res) => {
      
         localStorage.setItem('tempbookShelfUrl', user.bookShelfUrl);
     
+        // 유저 객체 생성 및 등록이 완료되면, 
+        // 클라이언트를 routes.intro로 이동시킴
         res.redirect(routes.intro);
+        
+        // next()를 사용하는 이유는 postJoin 함수가 미들웨어처럼 기능을 하게 하기 위함임
+        // 즉, postJoin함수가 실행되고 바로 postLogin 함수가 실행될 수 있도록 하기 위함임 
         next();
 
     }catch(error){
+            // error를 출력함
             console.log(error);
+            // error가 발생했으므로, 다시 클라이언트를 routes.join으로 이동시킴 
             res.redirect(routes.join);
     }
 }
