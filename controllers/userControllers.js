@@ -32,8 +32,7 @@ export const postJoin = async (req, res) => {
     
     // 다음과 같이 req객체의 parameter인 
     // email과 password를 추출할 수 있음
-    // 이렇게 해주는 이유는 뒤에서 User 객체를 만들 때,
-    // email과 password를 활용해주기 위함임 
+    // 이렇게 해주는 이유는 뒤에서 User 객체를 만들 때, email과 password를 활용해주기 위함임 
     const {
         body: {email, password}
     } = req;
