@@ -1,12 +1,31 @@
+// userControllers.js 파일은 
+// 유저와 관련된 회원 가입, 로그인, 페이스북 로그인 등과 같은 다양한 기능을
+// 구현하기 위한 controller 함수들을 구현함
+
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
 import localStorage from "localStorage";
 import { runInNewContext } from "vm";
 
-
+// home은 routes.home으로 get요청이 들어왔을 때, home.pug를 렌더링하는 기능을 함
 export const home = (req, res) => res.render("home");
+
+// getJoin은 routes.join으로 get요청이 들어왔을 때, join.pug를 렌더링하는 기능을 함 
 export const getJoin = (req, res) => res.render("join");
+
+// postJoin은 routes.join으로 post요청이 들어왔을 때, 
+// 유저가 입력한 email과 password로, 새로운 User 모델을 만드는 역할을 함 
+// User 모델을 만들면 register()로 등록을 함
+// register메소드는 passport-local-mongoose의 메서드임
+
+// 또한 async-await 패턴을 사용함
+// 이 패턴을 사용하는 이유는 User 객체가 register된 후에
+// 다음 로직이 실행되게 하기 위함임
+// 자바스크립트는 비동기 방식으로 실행되기 때문에
+// async-await 패턴을 사용하지 않으면, User 객체가 register되지 않고 
+// 함수가 종료될 수 있음
+// 따라서 async-await와 같은 비동기 처리 패턴을 사용해야 함 
 export const postJoin = async (req, res) => {
     const {
         body: {email, password}
