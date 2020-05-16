@@ -28,6 +28,7 @@ app.use(helmet());
 
 // pug라는 템플릿 엔진을 사용함
 // Express가 템플릿을 렌더링하려면 다음과 같이 앱을 설정 해야함
+// set 메소드는 웹 서버의 환경을 설정하는데 필요한 메소드임
 app.set("view engine", "pug");
 
 // express.static은 이미지, CSS, Javascript 파일과 같은 정적 파일을 사용하기 위해서 선언됨
