@@ -1,3 +1,5 @@
+// 이 파일의 가장 주요한 목적은 라우트로 들어온 REST API 요청에 대해서 알맞은 콜백 함수를 실행시키는 것임
+
 import express from "express";
 import passport from "passport";
 
@@ -13,7 +15,6 @@ import routes from "../routes";
 // import하는 이유는 여기서 라우트를 통해 들어오는 요청에 대해 해당 콜백함수를 매칭시켜주기 위함임  
 import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, myLibrary, myPage, bookPage, page1, facebookLogin, postFacebookLogin } from '../controllers/userControllers';
 
-// 이 파일의 가장 주요한 목적은 라우트로 들어온 REST API 요청에 대해서 알맞은 콜백 함수를 실행시키는 것임
 
 // Router()메소드는 새로운 router 객체를 만든다
 // router 객체는 미들웨어 및 라우트의 분리된 인스턴스임
@@ -75,5 +76,6 @@ globalRouter.get(
 )
 
 // globalRouter 객체를 export함
-// 이 객체를 export하는 이유는 app.js에서 import하기 위함임 
+// 이 객체를 export하는 이유는 app.js에서
+// import하기 위함임 
 export default globalRouter;
