@@ -5,8 +5,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 // mongoose.connect()는 mongoose와 MongoDB를 연결하기 위해 사용하는 메소드임
-// 여기서 process.env.MONGO_URL은 MongoDB의 주소를 나타내며,
-// 보안상 목적으로 env파일에 저장해둠
+// 여기서 process.env.MONGO_URL은 MongoDB의 주소를 나타내며, 보안상 목적으로 env파일에 저장해둠
 // mongoose.connect()에는 옵션을 추가할 수 있음
 
 // useNewUrlParser는 MongoDB의 connection string parser가 deprecated되면서,
