@@ -66,5 +66,5 @@ globalRouter.get(
 )
 
 // globalRouter 객체를 export함
-// 이 객체를 export하는 이유는 app.js에서 import하기 위함임 
+// 그 이유는 app.js에서 import하기 위함임 
 export default globalRouter;
