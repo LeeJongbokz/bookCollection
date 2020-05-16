@@ -1,5 +1,12 @@
 import express from "express";
 import passport from "passport";
+
+// routes.js파일에서 routes 객체를 import함
+// routes를 import하는 이유는 
+// 이 파일에서 라우팅 기능을 사용할 때, 라우트 주소를 사용하기 위함임 
+
+// 이 때, 여러 라우트 주소를 routes라는 하나의 객체에 묶어줘서
+// 편리하게 사용할 수 있도록 함 
 import routes from "../routes";
 
 // userControllers.js에 선언한 컨트롤러 콜백함수들을 import함
@@ -67,4 +74,6 @@ globalRouter.get(
     postFacebookLogin
 )
 
+// globalRouter 객체를 export함
+// 이 객체를 export하는 이유는 app.js에서 import하기 위함임 
 export default globalRouter;
