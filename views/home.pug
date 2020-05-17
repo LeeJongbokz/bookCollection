@@ -123,12 +123,24 @@ block content
         <div id="login-form">
             <form id="form_login">
                     <p class="welcome"> BookCollection에 오신 것을 환영합니다! </p>
+                    
+                    // 클라이언트가 이메일을 입력하는 input 필드를 만듦
                     <input type="text" id="username" placeholder=" 이메일" />
+                    
+                    // 클라이언트가 비밀번호를 입력하는 input 필드를 만듦
                     <input type="password" id="password" placeholder=" 비밀번호"/>
+                    
+                    // 클라이언트가 로그인을 할 수 있는 버튼을 만듦
+                    // 버튼을 누르면 /mylibrary 페이지로 이동함 
                     <button id="submitbutton" onClick="location.href='/mylibrary'" type="button">로그인</button>
+                    
+                    // 클라이언트가 페이스북 로그인을 할 수 있는 버튼을 만듦 
                     <div id="facebook">
                       <button id="submitbutton2" onClick="location.href='/auth/facebook'" type="button"><i class="fa fa-facebook-official"></i>페이스북 로그인</button>
                     </button>
+                    
+                    // 클라이언트가 회원가입 페이지로 이동할 수 있는 버튼을 만듦
+                    // 버튼을 누르면 /join 페이지로 이동함
                     <button id="submitbutton3" onClick="location.href='/join'" type="button">회원가입</button>
             </form>
         </div>
