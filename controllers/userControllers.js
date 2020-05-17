@@ -30,6 +30,7 @@ export const getJoin = (req, res) => res.render("join");
 export const postJoin = async (req, res) => {
     
     // req객체의 parameter인 email과 password를 추출함
+    // 이 때, body를 사용하면 클라이언트에서 POST 방식으로 전송한 요청 파라미터를 확인할 수 있음 
     // 이는 User 객체를 만들 때, email과 password를 활용해주기 위함임 
     const {
         body: {email, password}
