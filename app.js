@@ -58,6 +58,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(localsMiddleware);
+
+// 라우터 미들웨어를 사용하려면 다음과 같이 익스프레스 객체에서 라우터 객체를 참조해서 사용해야 함
 app.use(routes.home, globalRouter);
 
 
