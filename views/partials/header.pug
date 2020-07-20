@@ -1,0 +1,13 @@
+header.header
+    .header__wrapper
+        .header__column
+            ul
+                if isAuthenticated
+                    li
+                        a(href=routes.me) Profile
+                    li
+                        a(href=routes.logout) Log Out
+              
+
+                        
+                
