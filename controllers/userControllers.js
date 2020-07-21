@@ -4,6 +4,9 @@ import User from "../models/User";
 import localStorage from "localStorage";
 import session from "express-session";
 import { runInNewContext } from "vm";
+import request from "request";
+import querystring from "query-string";
+
 
 export const home = (req, res) => res.render("home");
 
@@ -63,9 +66,37 @@ export const logout = (req, res) => {
 
 }
 export const page1 = (req, res) => res.render("page1");
-export const intro = (req, res) => res.render("intro");
 export const myPage = (req, res) => res.render("mypage");
 export const myLibrary = (req, res) => res.render("mylibrary");
 
 export const bookPage = (req, res) => res.render("bookpage");
+
+
+export const getIntro = (req, res) => res.render("intro");
+export const postIntro = (req, res) => {
+
+    const {
+        body: {bookName}
+    } = req;
+
+    const option = {
+        query : bookName
+    }
+
+    request.get({
+        uri: "https://dapi.kakao.com/v3/search/book?target=title",
+        qs: option,
+        headers:{
+            Authorization: "KakaoAK 78d32ce1cac5c4d2a998590338bef88d"
+        }
+    }, function(err, res, body){
+        let json = JSON.parse(body)
+        console.log(json);
+    })
+
+    
+   
+}
+
+
 

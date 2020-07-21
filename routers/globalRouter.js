@@ -2,7 +2,7 @@ import express from "express";
 import passport from "passport";
 import routes from "../routes";
 
-import {home, getJoin, postJoin, getLogin, postLogin, logout, intro, myLibrary, myPage, bookPage, page1, facebookLogin, postFacebookLogin } from '../controllers/userControllers';
+import {home, getJoin, postJoin, getLogin, postLogin, logout, getIntro, myLibrary, myPage, bookPage, page1, facebookLogin, postFacebookLogin, postIntro } from '../controllers/userControllers';
 
 
 const globalRouter = express.Router();
@@ -16,7 +16,8 @@ globalRouter.post(routes.login, postLogin);
 
 globalRouter.get(routes.logout, logout);
 
-globalRouter.get(routes.intro, intro);
+globalRouter.get(routes.intro, getIntro);
+globalRouter.post(routes.intro, postIntro);
 
 globalRouter.get(routes.mylibrary, myLibrary);
 
@@ -32,14 +33,6 @@ globalRouter.get(
     passport.authenticate('facebook', {failWithError: true}, { failureRedirect: '/login' }),
     postFacebookLogin
 )
-
-function buttonAction1(res){
-    res.send('ok');
-}
-
-globalRouter.get(routes.test1, function(req,res){
-    buttonAction1(res);
-});
 
 
 export default globalRouter;

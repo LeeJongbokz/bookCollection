@@ -112,14 +112,14 @@ $(function() {
 
 $(document).ready(function(){
         
-
+    /*
     $('#search').click(function(){
         console.log('button clicked');
         $.ajax({url: 'test1', success: function(res){
             console.log('server response is', res);
         }});
     });
-
+    */
 
     /*
     $("#search").click(function(e){

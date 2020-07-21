@@ -127,17 +127,17 @@ block content
                 </figure> 
 
                 
-            <form id="regForm" action="">
+            <div id="regForm" action="">
                     <div id="tab1">
                         <div class="tab1header">
                             <h3>안녕하세요!</h3>
                             <i class='nextBtn fas fa-arrow-right'></i>
                         </div>
                         <h3 class="tab1h3">당신이 읽은 책에 별점을 매겨보세요</h3>
-                        <div class="search">
-                            <input class ="bookSearch" type="text" placeholder="책 이름을 입력해주세요.">
-                            <button id="search"><i class="fa fa-search"></i></button>
-                        </div>   
+                        <form action="/intro" method="post">
+                           <input type="text" name="bookName" id="bookSearch" placeholder="책 이름을 입력해주세요.">
+                           <input type="submit" id="search"><i class="fa fa-search"></i>   
+                        </form>
                         <div id="list">
                             <p class="bookList"></p>
                             <p class="bookNameList"></p>
@@ -173,7 +173,7 @@ block content
                     </div>
 
 
-            </form>
+            </div>
 
                         
         </div>
