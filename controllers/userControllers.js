@@ -34,12 +34,11 @@ export const postJoin = async(req, res, next) => {
      
         localStorage.setItem('tempbookShelfUrl', user.bookShelfUrl);
     
-        // res.redirect(routes.intro);
-        console.log("ID is made");
+        res.redirect(routes.intro);
 
     }catch(error){
         console.log(error);
-        //res.redirect(routes.join);
+        res.redirect(routes.join);
     }
 }
 
