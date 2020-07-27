@@ -2,6 +2,8 @@ import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
 import Book from "../models/Book";
+import Review from "../models/Review";
+
 import localStorage from "localStorage";
 import session from "express-session";
 import { runInNewContext } from "vm";
@@ -114,9 +116,28 @@ export const postIntro = async(req, res) => {
 
     })
 
-    
-    
 }
+
+export const postBookPage = (req, res) => {
+
+    const {
+        body: {bookReview}
+    } = req;
+
+    try{        
+        const review = new Review({
+            bookReview
+        })
+    
+        res.redirect(routes.mylibrary);
+
+    }catch(error){
+        console.log(error);
+        res.redirect(routes.bookpage);
+    }   
+}
+
+
 
 
 

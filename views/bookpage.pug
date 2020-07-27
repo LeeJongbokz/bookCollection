@@ -19,10 +19,11 @@ block content
                     <div id="bookDescription"></div>
                 </div>
         </div>
-        <div id="bookReviewInfo">
+        <form id="bookReviewInfo" action="/bookpage" method="post">
             <h4> 리뷰 남기기</h4>
-            <div contenteditable="true", id="bookReview"></div>  
-            <button id="bookReviewSubmit">제출</button> 
+            <input type="text" name="bookReview" contenteditable="true", id="bookReview" required=true>  
+            <input id="bookReviewSubmit" type="submit">제출
+        </form>
         </div>
         <div id="bookReviews">
             <h4> 리뷰 </h4>

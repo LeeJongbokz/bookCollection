@@ -13,6 +13,8 @@ const ProfileSchema = new mongoose.Schema({
         ref: "Review"
     }
 
-
-
 })
+
+const Profile = mongoose.model("Profile", ProfileSchema);
+
+export default Profile;
