@@ -34,12 +34,12 @@ export const postJoin = async(req, res, next) => {
      
         localStorage.setItem('tempbookShelfUrl', user.bookShelfUrl);
     
-        res.redirect(routes.intro);
-
+        // res.redirect(routes.intro);
+        console.log("ID is made");
 
     }catch(error){
         console.log(error);
-        res.redirect(routes.join);
+        //res.redirect(routes.join);
     }
 }
 
@@ -125,8 +125,8 @@ export const postBookPage = (req, res) => {
     } = req;
 
     try{        
-        const review = new Review({
-            bookReview
+        const review = Review.create({
+            text: bookReview
         })
     
         res.redirect(routes.mylibrary);
