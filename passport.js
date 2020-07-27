@@ -15,10 +15,20 @@ passport.use(new FacebookStrategy(
         profileFields: ["id", "displayName", "photos", "email"],
         scope: ["public_profile", "email"]
     },
-    facebookLoginCallback
+    function(accessToken, refereshToken, profile, cb){
+        User.findOrCreate({facebookID: profile.id}, function(err, user){
+            return cb(err, user);
+        });
+    }
     )
 );
 
+passport.serializeUser(function(user, done){
+    done(null, user.id);
+});
 
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.deserializeUser(function(id, done){
+    User.findOne({where: { id }})
+        .then(user => done(null, user))
+        .catch(err => done(err));
+});

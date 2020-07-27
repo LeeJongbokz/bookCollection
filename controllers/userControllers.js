@@ -1,6 +1,7 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
+import Book from "../models/Book";
 import localStorage from "localStorage";
 import session from "express-session";
 import { runInNewContext } from "vm";
@@ -57,7 +58,6 @@ export const postFacebookLogin = (req, res) => {
 }
 
 
-
 export const logout = (req, res) => {
     req.flash("info", "Logged out, see you later");
     req.session.destroy();
@@ -73,7 +73,7 @@ export const bookPage = (req, res) => res.render("bookpage");
 
 
 export const getIntro = (req, res) => res.render("intro");
-export const postIntro = (req, res) => {
+export const postIntro = async(req, res) => {
 
     const {
         body: {bookName}
@@ -82,6 +82,8 @@ export const postIntro = (req, res) => {
     const option = {
         query : bookName
     }
+    
+    let json;
 
     request.get({
         uri: "https://dapi.kakao.com/v3/search/book?target=title",
@@ -89,13 +91,31 @@ export const postIntro = (req, res) => {
         headers:{
             Authorization: "KakaoAK 78d32ce1cac5c4d2a998590338bef88d"
         }
-    }, function(err, res, body){
-        let json = JSON.parse(body)
-        console.log(json);
+    }, function(err, callbackRes, body){
+        json = JSON.parse(body)
+        console.log(json.documents[0].title);
+        console.log(json.documents[0].authors);
+
+        let title = json.documents[0].title;
+        let authors = json.documents[0].authors;
+
+        try{
+            const book = Book.create({
+                title: title,
+                authors: authors
+            })
+
+            console.log(book);
+
+        }catch(error){
+            console.log(error);
+        }
+        res.send(title);
+
     })
 
     
-   
+    
 }
 
 

@@ -26,13 +26,12 @@ globalRouter.get(routes.mypage, myPage);
 globalRouter.get(routes.bookpage, bookPage);
 globalRouter.get(routes.page1, page1);
 
-globalRouter.get(routes.facebook, facebookLogin);
+globalRouter.get('/auth/facebook', passport.authenticate('facebook'));
 
-globalRouter.get(
-    routes.facebookCallback,
-    passport.authenticate('facebook', {failWithError: true}, { failureRedirect: '/login' }),
-    postFacebookLogin
-)
-
-
+globalRouter.get('/auth/facebook/callback', 
+                 passport.authenticate('facebook', {failureRedirect: '/login'}),
+                 function(req, res){
+                     res.redirect('/');
+});
+                    
 export default globalRouter;

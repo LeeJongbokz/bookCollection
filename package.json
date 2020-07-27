@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "browserslist": [
     "> 1%",
     "ie >= 8",
@@ -18,15 +19,15 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "nodemon --exec babel-node init.js",
+    "dev:server": "nodemon --experimental-modules --exec babel-node init.js",
     "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
     "build:assets": "WEBPACK_ENV=production webpack",
-    "tunnel": "ngrok http 4000"
+    "tunnel": "ngrok http 4000",
+    "compile": "babel src --out-dir .compiled --source-maps --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.10.2",
     "autoprefixer": "^9.7.4",
     "babel-upgrade": "^1.0.1",
     "body-parser": "^1.19.0",
@@ -66,11 +67,12 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.1",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
-    "babel-core": "^7.0.0-bridge.0",
+    "@babel/register": "^7.10.5",
     "babel-jest": "^26.0.1"
   }
 }

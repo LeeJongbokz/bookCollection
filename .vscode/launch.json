@@ -4,11 +4,15 @@
         "configurations": [
             {
                 "name": "Launch Program",
-                "program": "${workspaceFolder}/app.js",
+                "program": "${workspaceFolder}/src/app.js",
+                "outFiles": [ "${workspaceRoot}/.compiled/**/*.js" ],
                 "request": "launch",
                 "skipFiles": [
                     "<node_internals>/**"
                 ],
+                "env":{
+                    "DEBUG": null
+                },
                 "type": "pwa-node"
             },
             
@@ -21,14 +25,16 @@
                 "args": [],
                 "cwd": "${workspaceRoot}",
                 "preLaunchTask": null,
-                "runtimeExecutable": null,
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
                 "runtimeArgs": [
                     "--nolazy",
                     "--require",
                     "babel-register"
                 ],
                 "env": {
-                    "NODE_ENV": "development"
+                    "DEBUG": null,
+                    "NODE_ENV": "development",
+                    "BABEL_ENV": "debug"
                 },
                 "console": "internalConsole",
                 "sourceMaps": true,
