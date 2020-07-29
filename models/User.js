@@ -19,7 +19,20 @@ const UserSchema = new mongoose.Schema({
             type:mongoose.Schema.Types.ObjectId,
             ref: "Review"
         }
+    ],
+    posts:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: "Post"
+        }
+    ],
+    comments:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: "Comment"
+        }
     ]
+
 })
 
 UserSchema.virtual('password').set(function(password){
