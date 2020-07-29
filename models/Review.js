@@ -11,6 +11,7 @@ const ReviewSchema = new mongoose.Schema({
     },
     creator:{
         type: mongoose.Schema.Types.ObjectId,
+        required: "Creator is required",
         ref: "User"
     }
 })
@@ -18,3 +19,4 @@ const ReviewSchema = new mongoose.Schema({
 const Review = mongoose.model("Review", ReviewSchema);
 
 export default Review;
+

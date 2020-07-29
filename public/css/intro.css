@@ -476,13 +476,35 @@ label{
 
 
 #bookSearch{
-    width: 580px;
+    width: 200px;
     height: 40px;
     border-color: grey;
     border-width: 1.5px;
     border-radius: 10px;
     border-style: solid;
     margin-bottom: 50px;
+}
+
+#bookAuthor{
+    width: 50px;
+    height: 40px;
+    border-color: grey;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+
+}
+
+#bookStarPoint{
+    width: 50px;
+    height: 40px;
+    border-color: grey;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+
 }
 
 #search{

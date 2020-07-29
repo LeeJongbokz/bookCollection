@@ -1,7 +1,6 @@
 import passport from "passport";
 import User from "./models/User";
 import FacebookStrategy from "passport-facebook";
-import {facebookLoginCallback} from "./controllers/userControllers";
 import routes from "./routes";
 import socialLogin from './oauth';
 
@@ -24,11 +23,12 @@ passport.use(new FacebookStrategy(
 );
 
 passport.serializeUser(function(user, done){
+    console.log('serializeUser: ' + user.id);
     done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done){
-    User.findOne({where: { id }})
-        .then(user => done(null, user))
-        .catch(err => done(err));
+    User.findById(id, (err, user) => {
+        done(null, user);
+    });
 });

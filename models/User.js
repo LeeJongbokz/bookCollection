@@ -6,12 +6,19 @@ const UserSchema = new mongoose.Schema({
     email: {type: String, required: true, unique: true, 'default': ''},
     hashed_password: {type: String, required: true, 'default': ''},
     salt: {type: String, required: true},
-    book:[
+    avatarUrl: {type: String},
+    books:[
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Book"
         }
 
+    ],
+    reviews:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: "Review"
+        }
     ]
 })
 
@@ -40,4 +47,5 @@ UserSchema.plugin(passportLocalMongoose, { usernameField: "email"});
 const User = mongoose.model("User", UserSchema);
 
 export default User;
+
 

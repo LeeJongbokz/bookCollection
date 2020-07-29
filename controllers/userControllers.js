@@ -70,14 +70,13 @@ export const page1 = (req, res) => res.render("page1");
 export const myPage = (req, res) => res.render("mypage");
 export const myLibrary = (req, res) => res.render("mylibrary");
 
-export const bookPage = (req, res) => res.render("bookpage");
-
-
 export const getIntro = (req, res) => res.render("intro");
+/*
 export const postIntro = async(req, res) => {
 
     const {
-        body: {bookName}
+        body: {bookName},
+        user
     } = req;
 
     const option = {
@@ -94,8 +93,6 @@ export const postIntro = async(req, res) => {
         }
     }, function(err, callbackRes, body){
         json = JSON.parse(body)
-        console.log(json.documents[0].title);
-        console.log(json.documents[0].authors);
 
         let title = json.documents[0].title;
         let authors = json.documents[0].authors;
@@ -107,25 +104,53 @@ export const postIntro = async(req, res) => {
             })
 
             console.log(book);
+            res.send(title);
 
         }catch(error){
             console.log(error);
         }
-        res.send(title);
-
     })
 
 }
+*/
 
+export const postIntro = async(req, res) => {
+
+     const {
+         body: {bookName, author, starPoint},
+         user
+     } = req;
+
+     try{
+        const book = await Book.create({
+            title: bookName,
+            author: author,
+            starPoint: starPoint
+        })
+
+        req.user.books.push(book);
+
+
+    }catch(error){
+        console.log(error);
+    }
+     
+}
+
+
+export const getBookPage = (req, res) => res.render("bookpage");
 export const postBookPage = (req, res) => {
 
     const {
-        body: {bookReview}
+        body: {bookReview},
+        user
     } = req;
+
 
     try{        
         const review = Review.create({
-            text: bookReview
+            text: bookReview,
+            creator: req.user
         })
     
         res.redirect(routes.mylibrary);
