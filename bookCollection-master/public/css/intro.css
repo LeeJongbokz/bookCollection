@@ -1,0 +1,618 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+ul > h3{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FAF0E6;
+    margin-bottom: 0;
+}
+
+
+.tab1header{
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tab1header > h3{
+    margin-top: 20px;
+    margin-right: 250px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.tab1h3{
+    margin-top: 15px;
+    margin: auto;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+li{
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+
+#columns{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    column-width: 250px;
+    column-gap: 5px;
+}
+
+#columns figure img{
+    width: 100%;
+}
+
+#columns figure{
+    display: inline-block;
+    border: 1px solid grey;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px RGBA(0,0,0,0,5);
+    opacity: 0.6;
+    border-radius: 20px;
+
+}
+
+
+.wrap{
+    background-color:#FFFAFA;
+    position: absolute;
+    width: 100%;
+    height: 2400px;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+#regForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    line-height: 200px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -300px;
+    background-color: white;
+    text-align: center;
+
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+ 
+    overflow-y: auto;
+
+    border-radius: 20px 0 0 20px;
+}
+
+  
+  
+h1 {
+    text-align: center;  
+}
+/*  
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+*/
+  
+  /* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+  
+  /* Hide all steps by default: */
+.tab {
+    display: none;
+}
+  
+/*
+button {
+    width: 150px;
+    height: 50px;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+*/
+  
+button:hover {
+    opacity: 0.8;
+  }
+  
+.prevBtn {
+    top: 17px;
+    right: 80px;
+    width: 33px;
+    height: 33px;
+    vertical-align:middle;
+    text-align:center;
+    line-height: 80px;
+    position: relative;
+    font-size: 33px;
+}
+
+.prevBtn:hover{
+    cursor: pointer;
+    height: 33px;
+    width: 33px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+}
+  
+
+.nextBtn{
+    margin-top: 18px;
+    margin-right: -300px;
+    width: 33px;
+    height: 33px;
+    vertical-align:middle;
+    text-align:center;
+    line-height: 80px;
+    position: relative;
+    font-size: 33px;
+}
+
+.nextBtn:hover{
+    cursor: pointer;
+    height: 33px;
+    width: 33px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+}
+
+#btns1{
+    position: relative;
+    bottom: 8%;
+    width: 500px;
+    height: 100px;
+}
+
+.btnText{
+    height: 50px;
+    bottom: 77px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+  /* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+.step.active {
+    opacity: 1;
+}
+  
+  /* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #4CAF50;
+}
+
+#tab1{
+    height: 500px;
+}
+
+#tab2{
+    height: 500px;
+}
+
+#tab3{
+    height: 500px;
+}
+
+input[type=radio]{
+    margin-top: 2px;
+    width: 25px;
+    vertical-align: middle;
+    line-height: 2em;
+}
+
+label{
+    margin-top: 6px;
+    width: 30px;
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+#radios1{
+    width:200px;
+    height: 150px;
+    display: inline-block;
+    padding-bottom: 100px;
+}
+
+#rd1{
+    width: 200px;
+    height: 50px;
+}
+
+#rd2{
+    width: 200px;
+    height: 50px;
+}
+
+#rd3{
+    width: 200px;
+    height: 50px;
+}
+
+.tab1label{
+    margin-top: 5px;
+    margin-bottom: 1px;
+    width: 120px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.tab2label{
+    margin-top: 5px;
+    margin-bottom: 1px;
+    width: 170px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.tab2header{
+    padding-bottom: 10px;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tab2h3{
+    width: 500px;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.tab3h6{
+    font-color: black;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;  
+    margin-top: 20px;
+    vertical-align: center;
+}
+
+#bookShelves{
+    margin-top: 40px;
+}
+
+#regForm figure{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    bottom: 100px;
+}
+
+.bookShelf1{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bookShelf1:hover{
+    opacity: 0.5;
+} 
+
+.bookShelf1{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bookShelf1:hover{
+    opacity: 0.5;
+} 
+
+.bookShelf2{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bookShelf2:hover{
+    opacity: 0.5;
+} 
+
+.bookShelf3{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bookShelf3:hover{
+    opacity: 0.5;
+} 
+
+.bookShelf4{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bookShelf4:hover{
+    opacity: 0.5;
+} 
+
+.bookShelf4:active{
+    opacity: 0.5;
+} 
+
+.check1{
+    left: 240px;
+    bottom: 310px;
+    width: 58px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    
+}
+
+.check2{
+    right: 215px;
+    bottom: 310px;
+    width: 58px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+}
+
+.check3{
+    left: 240px;
+    bottom: 45px;
+    width: 58px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+}
+
+
+.check4{
+    right: 215px;
+    bottom: 45px;
+    width: 58px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+}
+
+
+#regForm #tab3columns{
+
+    position: relative;
+    column-gap: 5px;
+}
+
+#regForm figure #tab3columns .tab3level1{
+
+    display: inline-block;
+    width: 100px;
+    height: 140px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    bottom: 10%;
+}
+
+.search{
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 600px;
+    height: 43px;
+    display:flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: center;
+
+    border:1px solid grey;
+    border-radius: 10px;
+}
+
+
+#bookSearch{
+    width: 200px;
+    height: 40px;
+    border-color: grey;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+}
+
+#bookAuthor{
+    width: 50px;
+    height: 40px;
+    border-color: grey;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+
+}
+
+#bookStarPoint{
+    width: 50px;
+    height: 40px;
+    border-color: grey;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-bottom: 50px;
+
+}
+
+
+
+
+
+#search{
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    line-height: 1em;
+    background-color:white;
+    border-left-color: white;
+    border-color: grey;
+    border-width: 1.5px;
+    border-style:none;
+}
+
+#search img{
+    width: 100%;
+    height: 100%;
+}
+
+#list{
+    margin-top: 60px;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bookList{
+    width: 150px;
+    height: 600px;
+    margin-left: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bookList img{
+    width: 100px;
+    height: 150px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.bookNameList{
+
+    margin-top: -50px;
+    margin-left: -20px;
+    width: 250px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.bookNameList strong{
+
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+
+.bookStarList{
+
+    margin-top: -45px;
+    width: 300px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.my-rating{
+
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+
+.done{
+    position: fixed; 
+    width: 200px;
+    height: 50px;
+    top: 590px;
+    right: 670px;
+    display: inline-block;
+    line-height: 10px;
+
+    background-color: #b9936c;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.done:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
