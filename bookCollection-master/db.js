@@ -6,7 +6,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    "mongodb://localhost:27017/local",
+    process.env.DATABASE_URL,
     {
         useNewUrlParser: true,
         useFindAndModify: false,
