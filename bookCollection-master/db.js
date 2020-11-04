@@ -6,7 +6,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    process.env.DATABASE_URL,
+    "mongodb://heroku_z6b6wz7f:dmai4n5e7su77p32jl1a572b05@ds157298.mlab.com:57298/heroku_z6b6wz7f",
     {
         useNewUrlParser: true,
         useFindAndModify: false,
