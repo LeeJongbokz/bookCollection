@@ -29,7 +29,7 @@ export const postJoin = async(req, res, next) => {
         
         await User.register(user, password);
 
-        res.status(200).json({key: user._id});
+        res.redirect(routes.intro);
 
     }catch(error){
         if(error.name == "UserExistsError"){
