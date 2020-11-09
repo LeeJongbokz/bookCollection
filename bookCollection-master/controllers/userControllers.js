@@ -55,9 +55,11 @@ export const facebookLogin = passport.authenticate("facebook", {failWithError: t
 
 
 export const facebookLoginCallback = async (_, __, profile, cb) => {
+    
     const {
       _json: { id, name, email }
     } = profile;
+
     try {
       const user = await User.findOne({ email });
       if (user) {
