@@ -104,7 +104,9 @@
         if(this.settings.disableAfterRate){
           this.$stars.off();
         }
-        console.log(index+1);
+        var globalVariable ={
+            x: index+1 
+        };
       },
   
       applyRating: function(rating){
