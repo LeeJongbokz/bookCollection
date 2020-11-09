@@ -16,7 +16,7 @@ passport.use(new FacebookStrategy(
         profileFields: ["email"],
         scope: ["public_profile", "email"]
     },
-    facebookLogainCallback
+    facebookLoginCallback
 ));
 
 passport.serializeUser(function(user, done){
