@@ -1,5 +1,7 @@
 
 
+
+
 $(function() {
     
     var currentTab = 1; 
@@ -109,23 +111,30 @@ $(function() {
 })
 
 
+books = []
+
 
 $(document).ready(function(){
         
-    /*
+    
     $("#search").click(function(e){
 
         e.preventDefault();
+        book = [];
 
         $.ajax({    
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: $('.bookSearch').val() },
+            data: { query: $('#bookSearch').val() },
             headers: {Authorization: "KakaoAK 78d32ce1cac5c4d2a998590338bef88d"}
         })
             .done(function( msg ) {
                 $('.bookList').append("<img src='"+ msg.documents[0].thumbnail + "'/>");
                 $('.bookNameList').append("<strong>" + msg.documents[0].title + "</strong>");
+                console.log(msg.documents[0].title);
+                console.log(msg.documents[0].author);
+                book.push(msg.documents[0].title);
+                book.push(msg.documents[0].author);
             });
         
         $('.bookStarList').append('<div class="my-rating"></div>');    
@@ -133,10 +142,17 @@ $(document).ready(function(){
         $(".my-rating").starRating({
             starSize: 25,
             callback: function(currentRating, $el){
-                // make a server call here
+             
             }
         });
+        console.log(globalVariable.x);
+        book.push(globalVariable.x);
+
+        for(let i=0; i<book.length; i++){
+            console.log(book[i]);
+        }
+
     });
-    */
+    
 });
 

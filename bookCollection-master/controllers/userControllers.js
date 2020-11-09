@@ -39,9 +39,14 @@ export const postJoin = async(req, res, next) => {
     }
 }
 
-export const getLogin = (req, res) => res.render("login");
-export const postLogin = passport.authenticate('local',{
-    failureRedirect: routes.login,
+export const getLogin = (req, res) => res.render("mylibrary");
+export const postLogin1 = passport.authenticate('local',{
+    failureRedirect: routes.home,
+    successRedirect: routes.mylibrary
+}); 
+
+export const postLogin2 = passport.authenticate('local',{
+    failureRedirect: routes.home,
     successRedirect: routes.intro
 }); 
  
@@ -54,6 +59,10 @@ export const facebookLoginCallback = (accessToken, refreshToken, profile, cb) =>
 
 export const postFacebookLogin = (req, res) => {
     res.redirect(routes.home);
+}
+
+export const getProfile = (req, res) =>{
+    res.render("profile");
 }
 
 
@@ -80,6 +89,7 @@ export const postIntro = async(req, res) => {
      try{
 
         let searchedBook = Book.findOne({'title': bookName}).exec();
+        console.log(searchedBook);
         let book;
 
         if(searchedBook != NULL){

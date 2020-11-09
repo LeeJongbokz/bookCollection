@@ -104,6 +104,7 @@
         if(this.settings.disableAfterRate){
           this.$stars.off();
         }
+        console.log(index+1);
       },
   
       applyRating: function(rating){
@@ -142,7 +143,6 @@
         // force minimum rating
         index = ( minRating && minRating <= this.settings.totalStars && index < minRating ) ? minRating - 1 : index;
         return index;
-        console.log(index);
       },
   
       getOffsetByPixel: function(e, $target, width){

@@ -476,14 +476,19 @@ label{
 
 
 #bookSearch{
-    width: 200px;
+    width: 400px;
     height: 40px;
     border-color: grey;
     border-width: 1.5px;
     border-radius: 10px;
     border-style: solid;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
+
+#introForm{
+    height: 180px
+}
+
 
 #bookAuthor{
     width: 50px;
@@ -508,9 +513,6 @@ label{
 }
 
 
-
-
-
 #search{
     width: 40px;
     height: 40px;
@@ -529,7 +531,7 @@ label{
 }
 
 #list{
-    margin-top: 60px;
+    margin-top: 30px;
     display:flex;
     flex-direction: row;
     align-items: flex-start;

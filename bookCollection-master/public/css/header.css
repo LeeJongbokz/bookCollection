@@ -1,0 +1,30 @@
+/*.header__column {
+    float: right
+}
+*/
+
+.header__column{
+    height: 60px;
+}
+
+.header1 {
+    margin-left: 200px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.header2 {
+    float: right
+}
+
+#form_mypage{
+    margin-top: -100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    width: 1000px;
+}
+
+.search{
+    float: left;
+    margin-top: 50px;
+}

@@ -10,7 +10,7 @@ const INTRO = '/intro';
 const MYLIBRARY = '/mylibrary';
 const MYPAGE = '/mypage';
 const BOOKPAGE = '/bookpage';
-
+const PROFILE = '/profile';
 
 // Facebook
 
@@ -30,13 +30,15 @@ const routes = {
     page1: PAGE1,
     intro: INTRO,
     mylibrary: MYLIBRARY,
+    profile: PROFILE,
     mypage: MYPAGE,
     bookpage: BOOKPAGE,
 
     facebook: FB,
     facebookCallback : FB_CALLBACK,
 
-    post: POST
+    post: POST,
+
 };
 
 export default routes;

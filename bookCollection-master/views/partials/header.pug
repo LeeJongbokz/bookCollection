@@ -1,13 +1,24 @@
-header.header
-    .header__wrapper
-        .header__column
-            ul
-                if isAuthenticated
-                    li
-                        a(href=routes.me) Profile
-                    li
-                        a(href=routes.logout) Log Out
-              
+head
+    <link href='/css/header.css', type='text/css' rel="stylesheet">
+body
+    header.header
+        .header__wrapper
+            .header__column
+                ul
+                    <form id="form_mypage">
+                        <div class="search">
+                            <input class ="bookSearch" type="text" placeholder="원하는 책을 검색하세요.">
+                            <button id="search" type="button"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                    
+                    if loggedUser
+                        <li class="header1">
+                            a(href=routes.profile) 프로필
+                        </li>
+                        <li class="header2">
+                            a(href=routes.logout) 로그아웃
+                        </li>
 
                         
                 

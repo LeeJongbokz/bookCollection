@@ -8,6 +8,12 @@ const UserSchema = new mongoose.Schema({
     hashed_password: {type: String, required: true, 'default': ''},
     salt: {type: String, required: true},
     avatarUrl: {type: String},
+    friends:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
     books:[
         {
             type: mongoose.Schema.Types.ObjectId,
