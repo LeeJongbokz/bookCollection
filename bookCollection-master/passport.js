@@ -2,6 +2,9 @@ import passport from "passport";
 import User from "./models/User.js";
 import FacebookStrategy from "passport-facebook";
 import socialLogin from './oauth.js';
+import {
+    facebookLoginCallback
+} from "./controllers/userControllers.js";
 
 passport.use(User.createStrategy());
 
@@ -13,21 +16,8 @@ passport.use(new FacebookStrategy(
         profileFields: ["email"],
         scope: ["public_profile", "email"]
     },
-    function(accessToken, refereshToken, profile, cb){
-        User.findOne({id: profile.id}, (err, user) =>{
-            if(user){
-                return done(err, user);
-            }
-            const newUser = new User({
-                id: profile.id
-            });
-            newUser.save((user) => {
-                return done(null, user);
-            });
-        });
-        }
-    )
-);
+    facebookLogainCallback
+));
 
 passport.serializeUser(function(user, done){
     console.log('serializeUser: ' + user.id);

@@ -81,7 +81,6 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
   };
   
 
-
 export const postFacebookLogin = (req, res) => {
     res.redirect(routes.home);
 }
