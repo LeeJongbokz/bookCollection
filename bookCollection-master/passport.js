@@ -14,10 +14,18 @@ passport.use(new FacebookStrategy(
         scope: ["public_profile", "email"]
     },
     function(accessToken, refereshToken, profile, cb){
-        User.findOrCreate({facebookID: profile.id}, function(err, user){
-            return cb(err, user);
+        User.findOne({id: profile.id}, (err, user) =>{
+            if(user){
+                return done(err, user);
+            }
+            const newUser = new User({
+                id: profile.id
+            });
+            newUser.save((user) => {
+                return done(null, user);
+            });
         });
-    }
+        }
     )
 );
 
