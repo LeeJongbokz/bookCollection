@@ -2,7 +2,7 @@ import express from "express";
 import passport from "passport";
 import routes from "../routes.js";
 
-import {home, getJoin, postJoin, getProfile, getLogin, postLogin1, postLogin2, logout, getIntro, myLibrary, myPage, getBookPage, page1, facebookLogin, postFacebookLogin, postIntro, postBookPage } from '../controllers/userControllers.js';
+import {home, getJoin, postJoin, getProfile, getLogin, postLogin1, postLogin2, logout, getIntro, myLibrary, myPage, getBookPage, getFriend, page1, facebookLogin, postFacebookLogin, postIntro, postBookPage } from '../controllers/userControllers.js';
 import { onlyPublic} from "../middlewares.js";
 
 const globalRouter = express.Router();
@@ -37,4 +37,6 @@ globalRouter.get(routes.facebookCallback,
         postFacebookLogin
 );
                     
+globalRouter.get(routes.friend, getFriend);
+
 export default globalRouter;

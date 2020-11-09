@@ -96,8 +96,15 @@ export const logout = (req, res) => {
     res.redirect(routes.home);
 
 }
+
+export const getFriend = (req, res) =>{
+    res.render("friend");
+}
+
+
 export const page1 = (req, res) => res.render("page1");
 export const myPage = (req, res) => res.render("mypage");
+
 export const myLibrary = (req, res) => res.render("mylibrary");
 
 export const getIntro = (req, res) => res.render("intro");
