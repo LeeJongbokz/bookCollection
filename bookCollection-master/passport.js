@@ -10,7 +10,7 @@ passport.use(new FacebookStrategy(
         clientID: socialLogin.facebook.clientID,
         clientSecret: socialLogin.facebook.clientSecret,
         callbackURL: socialLogin.facebook.callbackURL,
-        profileFields: ["id", "displayName", "photos", "email"],
+        profileFields: ["email"],
         scope: ["public_profile", "email"]
     },
     function(accessToken, refereshToken, profile, cb){
