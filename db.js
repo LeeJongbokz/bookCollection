@@ -6,7 +6,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    "mongodb://localhost:27017/local",
+    "mongodb://iad2-c11-2.mongo.objectrocket.com:52366",
     {
         useNewUrlParser: true,
         useFindAndModify: false,
