@@ -6,7 +6,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    "mongodb+srv://heroku_vdrx5zrp:skan4502!@cluster-vdrx5zrp.cp75p.mongodb.net/heroku_vdrx5zrp?retryWrites=true&w=majority",
+    "mongodb+srv://bookcollection1:skan4502!@cluster-vdrx5zrp.cp75p.mongodb.net/sample_bookcollection?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useFindAndModify: false,
