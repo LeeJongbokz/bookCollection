@@ -28,7 +28,7 @@ export const postJoin = async(req, res, next) => {
         
         await User.register(user, password);
 
-        res.redirect(routes.intro);
+        next();
 
     }catch(error){
         if(error.name == "UserExistsError"){
@@ -165,6 +165,8 @@ export const postBookPage = async(req, res) => {
 }
 
 
-
+export const getAddFriend = (req, res) =>{
+    res.render("addfriend");
+} 
 
 

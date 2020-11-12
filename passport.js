@@ -23,7 +23,7 @@ passport.serializeUser(function(user, done){
     console.log('serializeUser: ' + user.id);
     done(null, user.id);
 });
-
+``
 passport.deserializeUser(function(id, done){
     User.findById(id, (err, user) => {
         done(null, user);

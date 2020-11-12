@@ -35,17 +35,18 @@ li{
 
 
 .search{
-    margin-left: 450px;
-    margin-top: 50px;
+    margin-left: 550px;
+    margin-top: 20px;
+    padding-bottom: 20px;
     width: 600px;
     height: 43px;
     display:flex;
     flex-direction:row;
     align-items: flex-start;
     justify-content: center;
-
+    background-color:white;
     border:1px solid grey;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 
@@ -55,12 +56,12 @@ li{
     margin-bottom: 50px;
     border-color: grey;
     border-width: 1.5px;
-    border-radius: 10px;
+    border-radius: 3% 0% 0% 3%;
     border-style: none;
 }
 
 #search{
-    width: 40px;
+    width: 50px;
     height: 40px;
     margin-right: 6px;
     line-height: 1em;
@@ -68,7 +69,8 @@ li{
     border-left-color: white;
     border-color: grey;
     border-width: 1.5px;
-    border-style:none;
+    border-style: none;
+    border-radius: 0% 10% 10% 0%;
 }
 
 #search img{
@@ -91,4 +93,28 @@ li{
     border-color: white;
     margin: 0 auto;
     margin-top: 50px;
+}
+
+.header__wrapper{
+    height: 80px;
+}
+
+.header__column{
+    height: 80px;
+}
+
+#form_mypage{
+    height: 75px;
+}
+
+.header1{
+    margin-top: 25px;
+}
+
+.header2{
+    margin-top: 25px;
+}
+
+.header3{
+    margin-top: 25px;
 }

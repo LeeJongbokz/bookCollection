@@ -1,1 +1,15 @@
 extends layouts/main.pug
+
+block content
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/friend.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    </head>   
+    <br>
+     <input type="text" class="search_box" placeholder="친구를 찾아보세요">
+     <button>찾기</button>
+
+     <button class="friend" type="button" onClick="location.href='/friend'">친구</button>
+     <button class="addFriend" type="button" onClick="location.href='/addfriend'">친구 추가하기</button>
+
+

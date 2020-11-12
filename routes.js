@@ -20,7 +20,7 @@ const FB_CALLBACK = "/auth/facebook/callback";
 // Friend
 
 const FRIEND = "/friend";
-
+const ADDFRIEND = "/addfriend"
 
 // Post
 
@@ -43,6 +43,7 @@ const routes = {
     facebookCallback : FB_CALLBACK,
 
     friend: FRIEND,
+    addFriend: ADDFRIEND,
 
     post: POST,
 
