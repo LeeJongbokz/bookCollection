@@ -6,7 +6,7 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    " mongodb://iad2-c11-2.mongo.objectrocket.com:52366,iad2-c11-1.mongo.objectrocket.com:52366,iad2-c11-0.mongo.objectrocket.com:52366/?replicaSet=4f1",
+    "mongodb+srv://heroku_vdrx5zrp:skan4502!@cluster-vdrx5zrp.cp75p.mongodb.net/heroku_vdrx5zrp?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useFindAndModify: false,
