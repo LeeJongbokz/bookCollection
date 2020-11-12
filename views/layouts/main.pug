@@ -9,3 +9,15 @@ html
         include ../partials/header
         main    
             block content
+    
+    <script>
+      FB.api(
+            '/me',
+            'GET',
+        {"fields":"friends"},
+        function(response) {
+            console.log(response);
+        }
+    );
+    </script>
+        
