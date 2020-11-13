@@ -3,12 +3,7 @@ import routes from "../routes.js";
 import User from "../models/User.js";
 import Book from "../models/Book.js";
 import Review from "../models/Review.js";
-
-import localStorage from "localStorage";
-import session from "express-session";
-import { runInNewContext } from "vm";
-import request from "request";
-import querystring from "query-string";
+import socialLogin from './oauth.js';
 
 
 export const home = (req, res) => res.render("home");
@@ -73,6 +68,13 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
         name,
         facebookId: id,
         avatarUrl: `https://graph.facebook.com/${id}/picture?type=large`
+      });
+
+      FB.init({
+        appId      : socialLogin.facebook.clientID,
+        status     : true,
+        xfbml      : true,
+        version    : 'v2.7' // or v2.6, v2.5, v2.4, v2.3
       });
 
       FB.api(
