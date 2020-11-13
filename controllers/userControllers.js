@@ -3,7 +3,7 @@ import routes from "../routes.js";
 import User from "../models/User.js";
 import Book from "../models/Book.js";
 import Review from "../models/Review.js";
-import socialLogin from './oauth.js';
+import socialLogin from '../oauth.js';
 
 
 export const home = (req, res) => res.render("home");
