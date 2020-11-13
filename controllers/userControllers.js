@@ -64,6 +64,7 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
       if (user) {
         user.facebookId = id;
         user.avatarUrl = `https://graph.facebook.com/${id}/picture?type=large`;
+      
         user.save();
         return cb(null, user);
       }
@@ -73,6 +74,20 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
         facebookId: id,
         avatarUrl: `https://graph.facebook.com/${id}/picture?type=large`
       });
+
+      FB.api(
+        '/me',
+        'GET',
+        {"fields":"friends"},
+        function(response) {
+            if(user){
+                user.friends.push(response);
+            }else{
+                newUser.friends.push(response);
+            }
+        }
+      );
+
       return cb(null, newUser);
     } catch (error) {
       return cb(error);
