@@ -2,48 +2,50 @@
 
 
 
-<img width="700" height="400" src= "https://user-images.githubusercontent.com/8718430/96022756-4e7da700-0e8c-11eb-95c6-52c24957c58d.png">
+<img width="750" height="400" src= "https://user-images.githubusercontent.com/8718430/96022756-4e7da700-0e8c-11eb-95c6-52c24957c58d.png">
 
-BookCollection is a book review site which offers insightful book reviews.
+BookCollection is a book review site which offers insightful book reviews.<br>
 *This project refers to Youtube Clone Coding on Nomad Coder*
 
+## 1. Project URL
+ 
+https://bookcollection1.herokuapp.com/
 
-## Requirements
+
+## 2. Requirements
 
 You need a Chrome browser to take full advantage of it.
 
-## Installation
+## 3. Installation
 From your project directory, run the following:
 
-### Development Environment
-<code>
-$ npm install
-client and server
-$ npm run dev:server
-visit http://localhost:4000     
-</code>
+1. $ npm install<br>
+1. $ npm run dev:server<br>
+1. visit http://localhost:4000<br>     
 
-## Features
+
+## 4. Features
 * Read book reviews
 * Write book reviews
 * Select favorite books
 
-## Client-Side
+## 5. Client-Side Stack 
 * Using modern Javascript
 * HTML, CSS
 * Jquery
 
-## Server-Side
+## 6. Server-Side Stack
 * Server-side platform based on JavaScript engine (V8 engine) Node.js
 * Using es5+ Javascript with Babel
 * Using express, simple and flexible Node.js web application framework
+* Heroku
 
-## Test
+## 7. Test
 * Using Postman for testing API request and response  
 * Using k6 for API load testing 
 
 
-## API Specification 
+## 8. API Specification 
 
 
 ### 1) Membership Registration Specification
@@ -165,3 +167,54 @@ visit http://localhost:4000
   
 4. Error Code
    
+
+
+
+
+## 9. k6 API Loading Test Results
+
+  Metric name | Definition
+   ------|------
+   http_req_duration	 | It's equal to http_req_sending + http_req_waiting + http_req_receiving.<br> (i.e. how long did the remote server take to process the request and respond,<br> without the initial DNS lookup/connection times). 
+   http_reqs | How many HTTP requests has k6 generated, in total.
+                      
+
+
+### 1. GET Request to '/'
+
+   Scenario | VUs | Duration | 
+   ------|------|----- 
+   1 |2000| 30s
+    
+   Metric name | avg| min | med | max |
+   ------|------|-----|-----|-----
+   http_req_duration |  5.79s | 232.13ms | 5.53s | 13.14s
+     
+   Metric name | TPS | 
+   ------|------|
+   http_reqs | 29.256048/s  
+   
+
+### 2. POST Request to '/join'
+
+   Scenario | VUs | Duration | 
+   ------|------|----- 
+   1 |2000| 30s
+    
+
+   Metric name | avg| min | med | max |
+   ------|------|-----|-----|-----
+   http_req_duration |  38.78s | 30.21s | 40.79s | 45.04s
+     
+   Metric name | TPS | 
+   ------|------|
+   http_reqs | 9.38196/s
+   
+   
+
+## 10. Data Modelling
+
+
+  
+  
+
