@@ -214,6 +214,8 @@ From your project directory, run the following:
 
 ## 10. Data Modelling
 
+![_____________ (1)](https://user-images.githubusercontent.com/8718430/99140639-e5ee3980-2686-11eb-86ab-08df168fb4f9.png)
+
 
   
   
