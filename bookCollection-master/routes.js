@@ -17,6 +17,11 @@ const PROFILE = '/profile';
 const FB = "/auth/facebook";
 const FB_CALLBACK = "/auth/facebook/callback";
 
+// Friend
+
+const FRIEND = "/friend";
+const ADDFRIEND = "/addfriend"
+
 // Post
 
 const POST = "/post";
@@ -36,6 +41,9 @@ const routes = {
 
     facebook: FB,
     facebookCallback : FB_CALLBACK,
+
+    friend: FRIEND,
+    addFriend: ADDFRIEND,
 
     post: POST,
 

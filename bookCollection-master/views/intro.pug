@@ -131,7 +131,7 @@ block content
                     <div id="tab1">
                         <div class="tab1header">
                             <h3>안녕하세요!</h3>
-                            <i class='nextBtn fas fa-arrow-right'></i>
+                            <i class='nextBtn1 fas fa-arrow-right'></i>
                         </div>
                         <h3 class="tab1h3">당신이 읽은 책에 별점을 매겨보세요</h3>
                         <form action="/intro" method="post" id="introForm">
@@ -146,20 +146,21 @@ block content
                     </div>
                     <div id="tab2">
                         <div class="tab2header">
-                            <i class='prevBtn fas fa-arrow-left'></i>
+                            <i class='prevBtn1 fas fa-arrow-left'></i>
                             <h3 class="tab2h3">당신의 서재를 선택하세요</h3>
+                            <i class='nextBtn2 fas fa-arrow-right'></i>
                         </div>
                         <div id="bookShelves">     
                             <figure>
-                                <img class="bookShelf1" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/373736f80f15ad4a4caca58003dada64.jpg">
+                                <img class="bookShelf1" src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_1280.jpg">
                                 <img class="check1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
                             </figure> 
                              <figure>
-                                <img class="bookShelf2" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/3af9acda1cf5c6d96c97e38eb8e9599d.jpg">
+                                <img class="bookShelf2" src="https://cdn.pixabay.com/photo/2017/07/02/09/03/books-2463779_1280.jpg">
                                 <img class="check2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
                             </figure> 
                              <figure>
-                                <img class="bookShelf3" src="https://media-assets.bookbub.com/wp-content/uploads/2016/12/535ed0fa6f7ff3ff06b0267ddd45b720.jpg">
+                                <img class="bookShelf3" src="https://cdn.pixabay.com/photo/2016/01/19/01/42/library-1147815_1280.jpg">
                                 <img class="check3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
                             </figure> 
                              <figure>
@@ -167,10 +168,23 @@ block content
                                 <img class="check4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRG3y32plFsjMR4z0o9YT_ZcTMQ9bYrAk9C5gQ_Anh4pVfnzCwZ">
                             </figure> 
                         </div>
+                    </div>
+                    <div id="tab3">
+                        <div class="tab3header">
+                            <i class='prevBtn2 fas fa-arrow-left'></i>
+                            <h3 class="tab2h3">당신의 친구를 추가하시겠습니까?</h3>
+                        </div>
+
+                        <button id="facebook_friend"></button>
+
                          <form action='/intro', method="post", id="form_intro">
                             <button class="done" type="button" onClick="location.href='/mylibrary'">완료</button>
                          </form>
                     </div>
+
+                    
+
+
 
 
             </div>

@@ -11,8 +11,7 @@ const BookSchema = new mongoose.Schema({
 
         }
     ],
-    userNum: {type:Number,
-              default: 0}
+    userNum: {type:Number, default: 0}
 })
 
 

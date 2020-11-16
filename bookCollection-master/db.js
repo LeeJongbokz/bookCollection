@@ -6,12 +6,14 @@ dotenv.config();
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    "mongodb://heroku_z6b6wz7f:dmai4n5e7su77p32jl1a572b05@ds157298.mlab.com:57298/heroku_z6b6wz7f",
+    "mongodb+srv://bookcollection1:skan4502!@cluster-vdrx5zrp.cp75p.mongodb.net/sample_bookcollection?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useFindAndModify: false,
         useUnifiedTopology: true
     }
+
+    
 )
 const db = mongoose.connection;
 

@@ -19,13 +19,12 @@ passport.use(new FacebookStrategy(
     facebookLoginCallback
 ));
 
-passport.serializeUser(function(user, done){
-    console.log('serializeUser: ' + user.id);
-    done(null, user.id);
+passport.serializeUser((user, done) => { 
+    done(null, user._id); 
 });
 
-passport.deserializeUser(function(id, done){
+passport.deserializeUser((id, done) => {
     User.findById(id, (err, user) => {
-        done(null, user);
+      done(null, user); 
     });
-});    
+});

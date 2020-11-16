@@ -3,13 +3,7 @@ import routes from "../routes.js";
 import User from "../models/User.js";
 import Book from "../models/Book.js";
 import Review from "../models/Review.js";
-
-import localStorage from "localStorage";
-import session from "express-session";
-import { runInNewContext } from "vm";
-import request from "request";
-import querystring from "query-string";
-
+import socialLogin from "../oauth.js";
 
 export const home = (req, res) => res.render("home");
 
@@ -28,7 +22,7 @@ export const postJoin = async(req, res, next) => {
         
         await User.register(user, password);
 
-        res.redirect(routes.intro);
+        next();
 
     }catch(error){
         if(error.name == "UserExistsError"){
@@ -73,8 +67,61 @@ export const facebookLoginCallback = async (_, __, profile, cb) => {
         facebookId: id,
         avatarUrl: `https://graph.facebook.com/${id}/picture?type=large`
       });
-      return cb(null, newUser);
-    } catch (error) {
+
+
+      global.fbAsyncInit = function() {
+        FB.init({
+          appId : socialLogin.facebook.clientID,
+          autoLogAppEvents : true,
+          xfbml : true,
+          version : 'v3.2'
+        });
+      
+        console.log("This is Facebook");
+        /*
+        FB.api(
+            '/${id}',
+            'GET',
+            {"fields":"friends"},
+            function(response) {
+                console.log(response);
+                if(user){
+                    user.friends.push(response);
+                    console.log(user);
+                }else{
+                    newUser.friends.push(response);
+                    console.log(newUser);
+                }
+            }
+        );
+
+        FB.api(
+            '/{user-id}/friends',
+            'GET',
+            {},
+            function(response) {
+                console.log(response);
+                    if(user){
+                        user.friends.push(response);
+                        console.log(user);
+                    }else{
+                        newUser.friends.push(response);
+                        console.log(newUser);
+                    }
+            }  
+          );
+      };
+    */
+
+        FB.login(function(response) {
+            console.log(response);
+        }, {scope: 'user_birthday'}
+        );
+
+        }
+        
+        return cb(null, newUser);
+    }catch (error) {
       return cb(error);
     }
   };
@@ -96,8 +143,15 @@ export const logout = (req, res) => {
     res.redirect(routes.home);
 
 }
+
+export const getFriend = (req, res) =>{
+    res.render("friend");
+}
+
+
 export const page1 = (req, res) => res.render("page1");
 export const myPage = (req, res) => res.render("mypage");
+
 export const myLibrary = (req, res) => res.render("mylibrary");
 
 export const getIntro = (req, res) => res.render("intro");
@@ -158,6 +212,8 @@ export const postBookPage = async(req, res) => {
 }
 
 
-
+export const getAddFriend = (req, res) =>{
+    res.render("addfriend");
+} 
 
 

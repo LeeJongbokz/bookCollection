@@ -162,7 +162,29 @@ button:hover {
     opacity: 0.8;
   }
   
-.prevBtn {
+.prevBtn1 {
+    top: 17px;
+    margin-left: -500px;
+    right: 80px;
+    width: 33px;
+    height: 33px;
+    vertical-align:middle;
+    text-align:center;
+    line-height: 80px;
+    position: relative;
+    font-size: 33px;
+}
+
+.prevBtn1:hover{
+    cursor: pointer;
+    height: 33px;
+    width: 33px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+}
+
+.prevBtn2 {
+    margin-left: -50px;
     top: 17px;
     right: 80px;
     width: 33px;
@@ -174,7 +196,8 @@ button:hover {
     font-size: 33px;
 }
 
-.prevBtn:hover{
+
+.prevBtn2:hover{
     cursor: pointer;
     height: 33px;
     width: 33px;
@@ -183,7 +206,7 @@ button:hover {
 }
   
 
-.nextBtn{
+.nextBtn1{
     margin-top: 18px;
     margin-right: -300px;
     width: 33px;
@@ -195,7 +218,28 @@ button:hover {
     font-size: 33px;
 }
 
-.nextBtn:hover{
+.nextBtn1:hover{
+    cursor: pointer;
+    height: 33px;
+    width: 33px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+}
+
+
+.nextBtn2{
+    margin-top: 25px;
+    margin-right: -600px;
+    width: 33px;
+    height: 33px;
+    vertical-align:middle;
+    text-align:center;
+    line-height: 80px;
+    position: relative;
+    font-size: 33px;
+}
+
+.nextBtn2:hover{
     cursor: pointer;
     height: 33px;
     width: 33px;
@@ -313,12 +357,24 @@ label{
 
 
 .tab2h3{
-    width: 500px;
+    width: 350px;
     margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 130px;
     text-align: center;
     font-weight: bold;
     font-family: 'Nanum Gothic', sans-serif;
 }
+
+.tab3header{
+    padding-bottom: 10px;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .tab3h6{
     font-color: black;
@@ -617,4 +673,13 @@ label{
 .done:hover{
     cursor: pointer;
     opacity: 0.9;
+}
+
+
+#facebook_friend{
+
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/450px-Facebook_New_Logo_%282015%29.svg.png');
+    background-size:cover;
+    width: 300px;
+    height: 100px;
 }

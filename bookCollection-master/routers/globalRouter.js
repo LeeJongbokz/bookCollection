@@ -2,7 +2,7 @@ import express from "express";
 import passport from "passport";
 import routes from "../routes.js";
 
-import {home, getJoin, postJoin, getProfile, getLogin, postLogin1, postLogin2, logout, getIntro, myLibrary, myPage, getBookPage, page1, facebookLogin, postFacebookLogin, postIntro, postBookPage } from '../controllers/userControllers.js';
+import {home, getJoin, postJoin, getProfile, getLogin, postLogin1, postLogin2, logout, getIntro, myLibrary, myPage, getBookPage, getFriend, postFacebookLogin, postIntro, postBookPage, getAddFriend } from '../controllers/userControllers.js';
 import { onlyPublic} from "../middlewares.js";
 
 const globalRouter = express.Router();
@@ -33,8 +33,13 @@ globalRouter.post(routes.bookpage, postBookPage);
 globalRouter.get(routes.facebook, passport.authenticate('facebook'));
 
 globalRouter.get(routes.facebookCallback, 
-        passport.authenticate('facebook', {failureRedirect: '/login'}),
+        passport.authenticate('facebook', {failureRedirect: '/'}),
         postFacebookLogin
 );
                     
+globalRouter.get(routes.friend, getFriend);
+globalRouter.get(routes.addFriend, getAddFriend);
+
+
+
 export default globalRouter;

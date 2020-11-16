@@ -13,12 +13,21 @@ $(function() {
         if(n == 1){
             $('#tab1').show();
             $('#tab2').hide();
+            $('#tab3').hide();
             $('#regForm').css('left', 600);
             $('#regForm').css('width', 800);
             $('#regForm').css('height', 600);
         }else if(n == 2){
             $('#tab1').hide();
             $('#tab2').show();
+            $('#tab3').hide();
+            $('#regForm').css('left', 600);
+            $('#regForm').css('width', 800);
+            $('#regForm').css('height', 600);
+        }else if(n == 3){
+            $('#tab1').hide();
+            $('#tab2').hide();
+            $('#tab3').show();
             $('#regForm').css('left', 600);
             $('#regForm').css('width', 800);
             $('#regForm').css('height', 600);
@@ -26,7 +35,7 @@ $(function() {
     }
 
 
-    $('.prevBtn').click(function(e) {
+    $('.prevBtn1').click(function(e) {
 
         e.preventDefault();
 
@@ -40,7 +49,21 @@ $(function() {
         showTab(currentTab);     
     });
 
-    $('.nextBtn').click(function(e) {
+    $('.prevBtn2').click(function(e) {
+
+        e.preventDefault();
+
+        currentTab = currentTab - 1;
+        
+        if (currentTab == 4) {
+              document.getElementById("regForm").submit();
+              return false;
+        }
+            
+        showTab(currentTab);     
+    });
+
+    $('.nextBtn1').click(function(e) {
 
         e.preventDefault();
 
@@ -53,6 +76,23 @@ $(function() {
             
         showTab(currentTab);     
     });
+
+    
+    $('.nextBtn2').click(function(e) {
+
+        e.preventDefault();
+
+        currentTab = currentTab + 1;
+        
+        if (currentTab == 4) {
+              document.getElementById("regForm").submit();
+              return false;
+        }
+            
+        showTab(currentTab);     
+    });
+
+
 
 
     $(".check1").hide();
@@ -92,7 +132,7 @@ $(function() {
         $(".check3").show();
         $(".check4").hide();
         $('.done').show();
-        intro_bookShelfUrl = "https://media-assets.bookbub.com/wp-content/uploads/2016/12/535ed0fa6f7ff3ff06b0267ddd45b720.jpg";
+        intro_bookShelfUrl = "https://www.gettyimages.ae/detail/photo/old-books-in-a-library-royalty-free-image/171151211";
         localStorage.setItem('intro_bookShelfUrl', intro_tempbookShelfUrl);
         console.log(intro_bookShelfUrl);
     });
@@ -112,47 +152,4 @@ $(function() {
 
 
 books = []
-
-
-$(document).ready(function(){
-        
-    
-    $("#search").click(function(e){
-
-        e.preventDefault();
-        book = [];
-
-        $.ajax({    
-            method: "GET",
-            url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: $('#bookSearch').val() },
-            headers: {Authorization: "KakaoAK 78d32ce1cac5c4d2a998590338bef88d"}
-        })
-            .done(function( msg ) {
-                $('.bookList').append("<img src='"+ msg.documents[0].thumbnail + "'/>");
-                $('.bookNameList').append("<strong>" + msg.documents[0].title + "</strong>");
-                console.log(msg.documents[0].title);
-                console.log(msg.documents[0].author);
-                book.push(msg.documents[0].title);
-                book.push(msg.documents[0].author);
-            });
-        
-        $('.bookStarList').append('<div class="my-rating"></div>');    
-
-        $(".my-rating").starRating({
-            starSize: 25,
-            callback: function(currentRating, $el){
-             
-            }
-        });
-        console.log(globalVariable.x);
-        book.push(globalVariable.x);
-
-        for(let i=0; i<book.length; i++){
-            console.log(book[i]);
-        }
-
-    });
-    
-});
 

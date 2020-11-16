@@ -3,8 +3,9 @@ import passportLocalMongoose from "passport-local-mongoose";
 
 const UserSchema = new mongoose.Schema({
     
-    email: {type: String, required: true, unique: true, 'default': ''},
-    avatarUrl: {type: String},
+    email: {type: String, 'default': ''},
+<<<<<<< HEAD
+    avatarUrl: {type: Strin,
     friends:[
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -36,6 +37,9 @@ const UserSchema = new mongoose.Schema({
             ref: "Comment"
         }
     ]
+=======
+    avatarUrl: {type: String}
+>>>>>>> b26531f... project
 
 })
 
