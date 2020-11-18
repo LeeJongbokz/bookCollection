@@ -2,7 +2,7 @@
 
 
 
-<img width="750" height="400" src= "https://user-images.githubusercontent.com/8718430/96022756-4e7da700-0e8c-11eb-95c6-52c24957c58d.png">
+<img width="750" height="550" src= "https://user-images.githubusercontent.com/8718430/96022756-4e7da700-0e8c-11eb-95c6-52c24957c58d.png">
 
 BookCollection is a book review site which offers insightful book reviews.<br>
 *This project refers to Youtube Clone Coding on Nomad Coder*
